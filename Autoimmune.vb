@@ -20,4 +20,13 @@
             _medication = value
         End Set
     End Property
+
+    Public Property report As report
+        Get
+            Return _report
+        End Get
+        Set(value As report)
+            _report = value
+        End Set
+    End Property
 End Class
