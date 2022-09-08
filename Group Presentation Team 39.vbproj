@@ -99,6 +99,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="report.vb" />
+    <Compile Include="user.vb" />
     <Compile Include="Viral.vb" />
   </ItemGroup>
   <ItemGroup>
