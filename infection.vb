@@ -5,7 +5,7 @@ Option Infer Off
 Public Class infection
     Private _signsofinfection As String
     Private _source As String
-    Private _transmisson As String
+    Private _transmission As String
     Private _causes As String
 
     Public Property signsofinfection As String
@@ -26,10 +26,10 @@ Public Class infection
     End Property
     Public Property transmission As String
         Get
-            Return _transmisson
+            Return _transmission
         End Get
         Set(value As String)
-            _transmisson = value
+            _transmission = value
         End Set
     End Property
     Public Property causes As String
