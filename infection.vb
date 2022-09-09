@@ -1,4 +1,8 @@
-﻿Public Class infection
+﻿Option Strict On
+Option Explicit On
+Option Infer Off
+
+Public Class infection
     Private _signsofinfection As String
     Private _source As String
     Private _transmisson As String

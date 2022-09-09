@@ -1,4 +1,8 @@
-﻿Public Class report
+﻿Option Strict On
+Option Explicit On
+Option Infer Off
+
+Public Class report
     Private _diseases As String
     Private _prevention As String
 

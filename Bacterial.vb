@@ -1,8 +1,12 @@
-﻿Public Class Bacterial
+﻿Option Strict On
+Option Explicit On
+Option Infer Off
+
+Public Class Bacterial
     Private _meandivisiontime As Double
     Private _initialnumbacteria As Integer
     Private _finalnumbacteria As Integer
-    'p
+
     Private _report As report
 
     Public Property meandivisiontime As Double
