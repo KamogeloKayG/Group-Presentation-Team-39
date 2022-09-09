@@ -49,6 +49,6 @@ Public Class Bacterial
     Public Function calcnumbacteria(x As Integer) As Integer
         Dim numdivision As Integer
         numdivision = CInt(60 / _meandivisiontime)
-        Return _initialnumbacteria * 2 ^ numdivision
+        Return CInt(_initialnumbacteria * 2 ^ numdivision)
     End Function
 End Class
