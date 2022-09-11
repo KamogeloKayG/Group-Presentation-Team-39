@@ -1,4 +1,8 @@
-﻿Public Class Autoimmune
+﻿Option Strict On
+Option Explicit On
+Option Infer Off
+
+Public Class Autoimmune
     Private _obese As Boolean
     Private _medication As Boolean
     Private _report As report

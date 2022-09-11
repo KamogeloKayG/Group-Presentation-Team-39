@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Public Class frmScreening
     Private profile As user
     Private weight, height As Double
@@ -18,6 +19,13 @@
         profile.sAct = radSActive.Checked
         profile.drugs = radDrugs.Checked
     End Sub
+=======
+﻿Option Strict On
+Option Explicit On
+Option Infer Off
+
+Public Class Form1
+>>>>>>> 17b94be3b5827feec808198643656002c93cb477
 
     Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
         rtfReport.Text = "You're more likely to contract a <viral/bacterial/autoimmune> infection" + Environment.NewLine +

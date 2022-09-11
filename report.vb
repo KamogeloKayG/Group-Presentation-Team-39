@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 ﻿Public MustInherit Class report
+=======
+﻿Option Strict On
+Option Explicit On
+Option Infer Off
+
+Public Class report
+>>>>>>> 17b94be3b5827feec808198643656002c93cb477
     Private _diseases As String
     Private _prevention As String
 

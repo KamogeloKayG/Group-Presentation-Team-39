@@ -1,4 +1,8 @@
-﻿Public Class Viral
+﻿Option Strict On
+Option Explicit On
+Option Infer Off
+
+Public Class Viral
 
     Private _report As report
 
