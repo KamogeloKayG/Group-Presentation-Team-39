@@ -48,6 +48,8 @@ Partial Class frmScreening
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnEnter = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnReport = New System.Windows.Forms.Button()
+        Me.radRelatives = New System.Windows.Forms.RadioButton()
         Me.grpSocial.SuspendLayout()
         Me.grpEnviro.SuspendLayout()
         Me.grpHealth.SuspendLayout()
@@ -127,7 +129,7 @@ Partial Class frmScreening
         Me.grpSocial.Controls.Add(Me.radSActive)
         Me.grpSocial.Controls.Add(Me.radSmoker)
         Me.grpSocial.Controls.Add(Me.radAlcohol)
-        Me.grpSocial.Location = New System.Drawing.Point(281, 172)
+        Me.grpSocial.Location = New System.Drawing.Point(303, 172)
         Me.grpSocial.Name = "grpSocial"
         Me.grpSocial.Size = New System.Drawing.Size(198, 211)
         Me.grpSocial.TabIndex = 5
@@ -201,12 +203,13 @@ Partial Class frmScreening
         '
         'grpHealth
         '
+        Me.grpHealth.Controls.Add(Me.radRelatives)
         Me.grpHealth.Controls.Add(Me.radHIV)
         Me.grpHealth.Controls.Add(Me.radSick)
         Me.grpHealth.Controls.Add(Me.radMed)
         Me.grpHealth.Location = New System.Drawing.Point(17, 172)
         Me.grpHealth.Name = "grpHealth"
-        Me.grpHealth.Size = New System.Drawing.Size(242, 211)
+        Me.grpHealth.Size = New System.Drawing.Size(280, 211)
         Me.grpHealth.TabIndex = 8
         Me.grpHealth.TabStop = False
         Me.grpHealth.Text = "Overall Health:"
@@ -313,11 +316,32 @@ Partial Class frmScreening
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
         '
+        'btnReport
+        '
+        Me.btnReport.Location = New System.Drawing.Point(568, 389)
+        Me.btnReport.Name = "btnReport"
+        Me.btnReport.Size = New System.Drawing.Size(215, 47)
+        Me.btnReport.TabIndex = 17
+        Me.btnReport.Text = "Generate Report"
+        Me.btnReport.UseVisualStyleBackColor = True
+        '
+        'radRelatives
+        '
+        Me.radRelatives.AutoSize = True
+        Me.radRelatives.Location = New System.Drawing.Point(6, 152)
+        Me.radRelatives.Name = "radRelatives"
+        Me.radRelatives.Size = New System.Drawing.Size(273, 20)
+        Me.radRelatives.TabIndex = 9
+        Me.radRelatives.TabStop = True
+        Me.radRelatives.Text = "My relatives have Auto-Immune diseases"
+        Me.radRelatives.UseVisualStyleBackColor = True
+        '
         'frmScreening
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(864, 692)
+        Me.Controls.Add(Me.btnReport)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnEnter)
         Me.Controls.Add(Me.Label6)
@@ -374,4 +398,6 @@ Partial Class frmScreening
     Friend WithEvents btnEnter As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents radHIV As RadioButton
+    Friend WithEvents btnReport As Button
+    Friend WithEvents radRelatives As RadioButton
 End Class

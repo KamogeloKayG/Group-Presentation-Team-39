@@ -1,10 +1,36 @@
 ﻿Public Class frmScreening
-    Private user As user
+    Private profile As user
     Private weight, height As Double
 
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        'overall health
+        profile.sick = radSick.Checked
+        profile.meds = radMed.Checked
+        profile.HIVPos = radHIV.Checked
+        profile.sickFam = radRelatives.Checked
+        'environment
+        profile.waterQual = radWater.Checked
+        profile.overcrowded = radOvercrowded.Checked
+        profile.stress = radStress.Checked
+        'social habits
+        profile.smoker = radSmoker.Checked
+        profile.alcoholic = radAlcohol.Checked
+        profile.sAct = radSActive.Checked
+        profile.drugs = radDrugs.Checked
+    End Sub
+
+    Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
+        rtfReport.Text = "You're more likely to contract a <viral/bacterial/autoimmune> infection" + Environment.NewLine +
+        "Diseases to look out for include, but are not limited to:" + Environment.NewLine +
+        "Here are some steps to prevent it:"
+    End Sub
+
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
-        user.age = CInt(txtAge.Text)
-        user.gender = cboGender.Text
-        user.bmi = weight / height ^ 2
+        weight = CDbl(txtWeight.Text)
+        height = CDbl(txtHeight.Text)
+
+        profile.age = CInt(txtAge.Text)
+        profile.gender = cboGender.Text
+        profile.bmi = profile.calcBMI(weight, height)
     End Sub
 End Class
