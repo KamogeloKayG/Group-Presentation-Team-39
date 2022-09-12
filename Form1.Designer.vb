@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmScreening
-=======
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
->>>>>>> 17b94be3b5827feec808198643656002c93cb477
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -376,36 +371,5 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-<<<<<<< HEAD
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents rtfReport As RichTextBox
-    Friend WithEvents radSmoker As RadioButton
-    Friend WithEvents radAlcohol As RadioButton
-    Friend WithEvents radSActive As RadioButton
-    Friend WithEvents grpSocial As GroupBox
-    Friend WithEvents radDrugs As RadioButton
-    Friend WithEvents grpEnviro As GroupBox
-    Friend WithEvents radStress As RadioButton
-    Friend WithEvents radWater As RadioButton
-    Friend WithEvents radOvercrowded As RadioButton
-    Friend WithEvents Label4 As Label
-    Friend WithEvents grpHealth As GroupBox
-    Friend WithEvents radSick As RadioButton
-    Friend WithEvents radMed As RadioButton
-    Friend WithEvents txtAge As TextBox
-    Friend WithEvents cboGender As ComboBox
-    Friend WithEvents txtWeight As TextBox
-    Friend WithEvents txtHeight As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents btnEnter As Button
-    Friend WithEvents btnSave As Button
-    Friend WithEvents radHIV As RadioButton
-    Friend WithEvents btnReport As Button
-    Friend WithEvents radRelatives As RadioButton
-=======
->>>>>>> 17b94be3b5827feec808198643656002c93cb477
 End Class
