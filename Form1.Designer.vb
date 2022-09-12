@@ -34,4 +34,5 @@ Partial Class Form1
         Me.ResumeLayout(False)
 
     End Sub
+
 End Class
