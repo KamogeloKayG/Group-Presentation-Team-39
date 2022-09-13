@@ -3,7 +3,7 @@ Option Explicit On
 Option Infer Off
 
 Public Class Viral
-
+ Private _hivpositive As Boolean
     Private _report As report
     Private _age As Integer
     Private _gender As Boolean
