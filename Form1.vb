@@ -10,6 +10,7 @@ Public Class Form1
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         ReDim diseasecategory(3)
         Dim bac As Bacterial
         bac = New Bacterial
@@ -90,6 +91,8 @@ Public Class Form1
         If viral.Drugs >= 10 Then
             counterviral += 1
         End If
+
+        'upcasting
         diseasecategory(1) = viral
         diseasecategory(2) = aimmune
         diseasecategory(3) = bac
@@ -101,5 +104,13 @@ Public Class Form1
 
         Dim highest As String
         highest = bac.likely(viralperc, aimmuneperc, bacperc)
+
+        Select Case highest
+            Case "Viral"
+
+            Case "Bacterial"
+
+            Case "Auto-Immune"
+        End Select
     End Sub
 End Class
