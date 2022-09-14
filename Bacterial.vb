@@ -3,7 +3,7 @@ Option Explicit On
 Option Infer Off
 
 Public Class Bacterial
-
+    Inherits Diseasecategory
     Private _report As report
     Private _unprotectedsex As Boolean
     Private _hivpositive As Boolean
@@ -106,7 +106,7 @@ Public Class Bacterial
 
     End Function
 
-    Public Function medicament(x As Integer) As String
+    Public Overrides Function medicament(x As Integer) As String
         Dim treatment As String
         treatment = ""
         Select Case x
