@@ -3,7 +3,7 @@ Option Explicit On
 Option Infer Off
 
 Public Class report
-    'comment
+
     Private _diseases As String
     Private _prevention As String
 

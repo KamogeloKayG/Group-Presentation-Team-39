@@ -15,47 +15,31 @@ Imports System.IO
 Public MustInherit Class Diseasecategory
     Inherits report
 
-    Private viral As Viral
-    Private AI As Autoimmune
-    Private bacterial As Bacterial
     Private likelihood As String
 
     Public Sub New()
 
     End Sub
 
-    Private Function likely() As String
-        If (viral.vPerc > bacterial.bPerc) And (viral.vPerc > AI.aPerc) Then
+    Private Function likely(viralperc As Double, autoimmuneperc As Double, bacperc As Double) As String
+        If (viralperc > bacperc) And (viralperc > autoimmuneperc) Then
             likelihood = "Viral"
         End If
 
-        If (bacterial.bPerc > viral.vPerc) And (bacterial.bPerc > AI.aPerc) Then
+        If (bacperc > viralperc) And (bacperc > autoimmuneperc) Then
             likelihood = "Bacterial"
         End If
 
-        If (AI.aPerc > bacterial.bPerc) And (AI.aPerc > viral.vPerc) Then
+        If (autoimmuneperc > bacperc) And (autoimmuneperc > viralperc) Then
             likelihood = "Auto-Immune"
         End If
 
         Return likelihood
     End Function
 
-    Public Overrides Function Disease() As String
-        Dim sick As String
+    Public MustOverride Function medicament(x As Integer) As String
 
-        sick = "Visit a Doctor"
 
-        Select Case likelihood
-            Case "Viral"
-                sick = "Cold, Flu, AIDS, Stomach Flu, Hepatitis"
-            Case "Bacterial"
-                sick = "Strep Throat, Salmonella, Tuberculosis, STDs"
-            Case "Auto-Immune"
-                sick = "Arthritis, Multiple Sclerosis, Type 1 Diabetes, Lupus, Crohn's Disease"
-        End Select
-
-        Return MyBase.Disease + sick
-    End Function
     Public Overrides Function Prevent() As String
         Dim prevents As String
 
