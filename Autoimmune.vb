@@ -72,6 +72,14 @@
             _exebvirus = value
         End Set
     End Property
+    Public Property Female() As Boolean
+        Get
+            Return _female
+        End Get
+        Set(value As Boolean)
+            _female = value
+        End Set
+    End Property
 
     'checks whether the user is diabetic or not
     Public Function Diabetic(bloodsugarlevel As Double) As Boolean Implements Diabetes.Diabetic

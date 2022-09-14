@@ -22,53 +22,59 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.Checkboxsmoke = New System.Windows.Forms.CheckBox()
+        Me.checkboxAnxmeds = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.CheckBoxhivpositive = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxexebvirus = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxcholesterolmeds = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxregularPactivity = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxObese = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxcontact = New System.Windows.Forms.CheckBox()
+        Me.CheckBoxUnprotectedsex = New System.Windows.Forms.CheckBox()
+        Me.txtgender = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.CheckBoxhighbloodmeds = New System.Windows.Forms.CheckBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtage = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtdrugintake = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'CheckBox1
+        'Checkboxsmoke
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(6, 21)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(72, 20)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "Smoke"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.Checkboxsmoke.AutoSize = True
+        Me.Checkboxsmoke.Location = New System.Drawing.Point(6, 21)
+        Me.Checkboxsmoke.Name = "Checkboxsmoke"
+        Me.Checkboxsmoke.Size = New System.Drawing.Size(72, 20)
+        Me.Checkboxsmoke.TabIndex = 0
+        Me.Checkboxsmoke.Text = "Smoke"
+        Me.Checkboxsmoke.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'checkboxAnxmeds
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(6, 60)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(141, 20)
-        Me.CheckBox2.TabIndex = 1
-        Me.CheckBox2.Text = "Anxiety Medication"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.checkboxAnxmeds.AutoSize = True
+        Me.checkboxAnxmeds.Location = New System.Drawing.Point(6, 60)
+        Me.checkboxAnxmeds.Name = "checkboxAnxmeds"
+        Me.checkboxAnxmeds.Size = New System.Drawing.Size(141, 20)
+        Me.checkboxAnxmeds.TabIndex = 1
+        Me.checkboxAnxmeds.Text = "Anxiety Medication"
+        Me.checkboxAnxmeds.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.CheckBox9)
-        Me.GroupBox1.Controls.Add(Me.CheckBox8)
-        Me.GroupBox1.Controls.Add(Me.CheckBox7)
-        Me.GroupBox1.Controls.Add(Me.CheckBox6)
-        Me.GroupBox1.Controls.Add(Me.CheckBox5)
-        Me.GroupBox1.Controls.Add(Me.CheckBox4)
-        Me.GroupBox1.Controls.Add(Me.CheckBox3)
-        Me.GroupBox1.Controls.Add(Me.CheckBox1)
-        Me.GroupBox1.Controls.Add(Me.CheckBox2)
+        Me.GroupBox1.Controls.Add(Me.CheckBoxhighbloodmeds)
+        Me.GroupBox1.Controls.Add(Me.CheckBoxhivpositive)
+        Me.GroupBox1.Controls.Add(Me.CheckBoxexebvirus)
+        Me.GroupBox1.Controls.Add(Me.CheckBoxcholesterolmeds)
+        Me.GroupBox1.Controls.Add(Me.CheckBoxregularPactivity)
+        Me.GroupBox1.Controls.Add(Me.CheckBoxObese)
+        Me.GroupBox1.Controls.Add(Me.CheckBoxcontact)
+        Me.GroupBox1.Controls.Add(Me.CheckBoxUnprotectedsex)
+        Me.GroupBox1.Controls.Add(Me.Checkboxsmoke)
+        Me.GroupBox1.Controls.Add(Me.checkboxAnxmeds)
         Me.GroupBox1.Location = New System.Drawing.Point(45, 142)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(966, 262)
@@ -76,82 +82,82 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Select all that apply"
         '
-        'CheckBox9
+        'CheckBoxhivpositive
         '
-        Me.CheckBox9.AutoSize = True
-        Me.CheckBox9.Location = New System.Drawing.Point(191, 106)
-        Me.CheckBox9.Name = "CheckBox9"
-        Me.CheckBox9.Size = New System.Drawing.Size(102, 20)
-        Me.CheckBox9.TabIndex = 8
-        Me.CheckBox9.Text = "HIV Positive"
-        Me.CheckBox9.UseVisualStyleBackColor = True
+        Me.CheckBoxhivpositive.AutoSize = True
+        Me.CheckBoxhivpositive.Location = New System.Drawing.Point(191, 106)
+        Me.CheckBoxhivpositive.Name = "CheckBoxhivpositive"
+        Me.CheckBoxhivpositive.Size = New System.Drawing.Size(102, 20)
+        Me.CheckBoxhivpositive.TabIndex = 8
+        Me.CheckBoxhivpositive.Text = "HIV Positive"
+        Me.CheckBoxhivpositive.UseVisualStyleBackColor = True
         '
-        'CheckBox8
+        'CheckBoxexebvirus
         '
-        Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(191, 60)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(88, 20)
-        Me.CheckBox8.TabIndex = 7
-        Me.CheckBox8.Text = "Exebvirus"
-        Me.CheckBox8.UseVisualStyleBackColor = True
+        Me.CheckBoxexebvirus.AutoSize = True
+        Me.CheckBoxexebvirus.Location = New System.Drawing.Point(191, 60)
+        Me.CheckBoxexebvirus.Name = "CheckBoxexebvirus"
+        Me.CheckBoxexebvirus.Size = New System.Drawing.Size(88, 20)
+        Me.CheckBoxexebvirus.TabIndex = 7
+        Me.CheckBoxexebvirus.Text = "Exebvirus"
+        Me.CheckBoxexebvirus.UseVisualStyleBackColor = True
         '
-        'CheckBox7
+        'CheckBoxcholesterolmeds
         '
-        Me.CheckBox7.AutoSize = True
-        Me.CheckBox7.Location = New System.Drawing.Point(191, 21)
-        Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(166, 20)
-        Me.CheckBox7.TabIndex = 6
-        Me.CheckBox7.Text = "Cholesterol Medication"
-        Me.CheckBox7.UseVisualStyleBackColor = True
+        Me.CheckBoxcholesterolmeds.AutoSize = True
+        Me.CheckBoxcholesterolmeds.Location = New System.Drawing.Point(191, 21)
+        Me.CheckBoxcholesterolmeds.Name = "CheckBoxcholesterolmeds"
+        Me.CheckBoxcholesterolmeds.Size = New System.Drawing.Size(166, 20)
+        Me.CheckBoxcholesterolmeds.TabIndex = 6
+        Me.CheckBoxcholesterolmeds.Text = "Cholesterol Medication"
+        Me.CheckBoxcholesterolmeds.UseVisualStyleBackColor = True
         '
-        'CheckBox6
+        'CheckBoxregularPactivity
         '
-        Me.CheckBox6.AutoSize = True
-        Me.CheckBox6.Location = New System.Drawing.Point(6, 159)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(176, 20)
-        Me.CheckBox6.TabIndex = 5
-        Me.CheckBox6.Text = "Regular Physical Activity"
-        Me.CheckBox6.UseVisualStyleBackColor = True
+        Me.CheckBoxregularPactivity.AutoSize = True
+        Me.CheckBoxregularPactivity.Location = New System.Drawing.Point(6, 159)
+        Me.CheckBoxregularPactivity.Name = "CheckBoxregularPactivity"
+        Me.CheckBoxregularPactivity.Size = New System.Drawing.Size(176, 20)
+        Me.CheckBoxregularPactivity.TabIndex = 5
+        Me.CheckBoxregularPactivity.Text = "Regular Physical Activity"
+        Me.CheckBoxregularPactivity.UseVisualStyleBackColor = True
         '
-        'CheckBox5
+        'CheckBoxObese
         '
-        Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(6, 214)
-        Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(70, 20)
-        Me.CheckBox5.TabIndex = 4
-        Me.CheckBox5.Text = "Obese"
-        Me.CheckBox5.UseVisualStyleBackColor = True
+        Me.CheckBoxObese.AutoSize = True
+        Me.CheckBoxObese.Location = New System.Drawing.Point(6, 214)
+        Me.CheckBoxObese.Name = "CheckBoxObese"
+        Me.CheckBoxObese.Size = New System.Drawing.Size(70, 20)
+        Me.CheckBoxObese.TabIndex = 4
+        Me.CheckBoxObese.Text = "Obese"
+        Me.CheckBoxObese.UseVisualStyleBackColor = True
         '
-        'CheckBox4
+        'CheckBoxcontact
         '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(191, 159)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(77, 20)
-        Me.CheckBox4.TabIndex = 3
-        Me.CheckBox4.Text = "Contact "
-        Me.CheckBox4.UseVisualStyleBackColor = True
+        Me.CheckBoxcontact.AutoSize = True
+        Me.CheckBoxcontact.Location = New System.Drawing.Point(191, 159)
+        Me.CheckBoxcontact.Name = "CheckBoxcontact"
+        Me.CheckBoxcontact.Size = New System.Drawing.Size(77, 20)
+        Me.CheckBoxcontact.TabIndex = 3
+        Me.CheckBoxcontact.Text = "Contact "
+        Me.CheckBoxcontact.UseVisualStyleBackColor = True
         '
-        'CheckBox3
+        'CheckBoxUnprotectedsex
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(6, 106)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(129, 20)
-        Me.CheckBox3.TabIndex = 2
-        Me.CheckBox3.Text = "Unprotected Sex"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.CheckBoxUnprotectedsex.AutoSize = True
+        Me.CheckBoxUnprotectedsex.Location = New System.Drawing.Point(6, 106)
+        Me.CheckBoxUnprotectedsex.Name = "CheckBoxUnprotectedsex"
+        Me.CheckBoxUnprotectedsex.Size = New System.Drawing.Size(129, 20)
+        Me.CheckBoxUnprotectedsex.TabIndex = 2
+        Me.CheckBoxUnprotectedsex.Text = "Unprotected Sex"
+        Me.CheckBoxUnprotectedsex.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtgender
         '
-        Me.TextBox1.Location = New System.Drawing.Point(151, 66)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 3
+        Me.txtgender.Location = New System.Drawing.Point(151, 66)
+        Me.txtgender.Name = "txtgender"
+        Me.txtgender.Size = New System.Drawing.Size(100, 22)
+        Me.txtgender.TabIndex = 3
         '
         'Label1
         '
@@ -164,21 +170,67 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(47, 502)
+        Me.Button1.Location = New System.Drawing.Point(47, 448)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(355, 77)
         Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "View Results"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'CheckBoxhighbloodmeds
+        '
+        Me.CheckBoxhighbloodmeds.AutoSize = True
+        Me.CheckBoxhighbloodmeds.Location = New System.Drawing.Point(191, 213)
+        Me.CheckBoxhighbloodmeds.Name = "CheckBoxhighbloodmeds"
+        Me.CheckBoxhighbloodmeds.Size = New System.Drawing.Size(133, 20)
+        Me.CheckBoxhighbloodmeds.TabIndex = 9
+        Me.CheckBoxhighbloodmeds.Text = "High Blood Meds"
+        Me.CheckBoxhighbloodmeds.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(354, 55)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(32, 16)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Age"
+        '
+        'txtage
+        '
+        Me.txtage.Location = New System.Drawing.Point(425, 55)
+        Me.txtage.Name = "txtage"
+        Me.txtage.Size = New System.Drawing.Size(100, 22)
+        Me.txtage.TabIndex = 11
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(642, 58)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 16)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "Drugintake"
+        '
+        'txtdrugintake
+        '
+        Me.txtdrugintake.Location = New System.Drawing.Point(771, 52)
+        Me.txtdrugintake.Name = "txtdrugintake"
+        Me.txtdrugintake.Size = New System.Drawing.Size(100, 22)
+        Me.txtdrugintake.TabIndex = 13
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.Controls.Add(Me.txtdrugintake)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.txtage)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtgender)
         Me.Controls.Add(Me.GroupBox1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
@@ -190,17 +242,22 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents Checkboxsmoke As CheckBox
+    Friend WithEvents checkboxAnxmeds As CheckBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents CheckBox9 As CheckBox
-    Friend WithEvents CheckBox8 As CheckBox
-    Friend WithEvents CheckBox7 As CheckBox
-    Friend WithEvents CheckBox6 As CheckBox
-    Friend WithEvents CheckBox5 As CheckBox
-    Friend WithEvents CheckBox4 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents CheckBoxhivpositive As CheckBox
+    Friend WithEvents CheckBoxexebvirus As CheckBox
+    Friend WithEvents CheckBoxcholesterolmeds As CheckBox
+    Friend WithEvents CheckBoxregularPactivity As CheckBox
+    Friend WithEvents CheckBoxObese As CheckBox
+    Friend WithEvents CheckBoxcontact As CheckBox
+    Friend WithEvents CheckBoxUnprotectedsex As CheckBox
+    Friend WithEvents txtgender As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents CheckBoxhighbloodmeds As CheckBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtage As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtdrugintake As TextBox
 End Class

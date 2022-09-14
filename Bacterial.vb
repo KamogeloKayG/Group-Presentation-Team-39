@@ -12,6 +12,14 @@ Public Class Bacterial
     Private _smoking As Boolean
     Private _regularphysicalactivity As Boolean
 
+    Public Property unprotectedsex As Boolean
+        Get
+            Return _unprotectedsex
+        End Get
+        Set(value As Boolean)
+            _unprotectedsex = value
+        End Set
+    End Property
 
     Public Property hivpositive As Boolean
         Get
