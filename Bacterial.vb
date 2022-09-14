@@ -35,10 +35,10 @@ Public Class Bacterial
     End Property
     Public Property exercise As Boolean
         Get
-            Return _regularphysicalactivity
+            Return _nophysicalactivity
         End Get
         Set(value As Boolean)
-            _regularphysicalactivity = value
+            _nophysicalactivity = value
         End Set
     End Property
 
