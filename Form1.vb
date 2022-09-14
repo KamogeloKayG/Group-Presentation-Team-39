@@ -5,11 +5,12 @@ Option Infer Off
 
 Public Class Form1
     Private counterviral, counteraimmune, counterbacterial As Integer
-
+    Private diseasecategory() As Diseasecategory
 
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ReDim diseasecategory(3)
         Dim bac As Bacterial
         bac = New Bacterial
 
@@ -89,7 +90,16 @@ Public Class Form1
         If viral.Drugs >= 10 Then
             counterviral += 1
         End If
+        diseasecategory(1) = viral
+        diseasecategory(2) = aimmune
+        diseasecategory(3) = bac
 
+        Dim bacperc, aimmuneperc, viralperc As Double
+        bacperc = counterbacterial / 6 * 100
+        aimmuneperc = counteraimmune / 7 * 100
+        viralperc = counterviral / 4 * 100
 
+        Dim highest As String
+        highest = bac.likely(viralperc, aimmuneperc, bacperc)
     End Sub
 End Class

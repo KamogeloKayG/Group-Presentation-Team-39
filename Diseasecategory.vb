@@ -21,7 +21,7 @@ Public MustInherit Class Diseasecategory
         report = New report
     End Sub
 
-    Private Function likely(viralperc As Double, autoimmuneperc As Double, bacperc As Double) As String
+    Public Function likely(viralperc As Double, autoimmuneperc As Double, bacperc As Double) As String
         If (viralperc > bacperc) And (viralperc > autoimmuneperc) Then
             likelihood = "Viral"
         End If
@@ -37,9 +37,7 @@ Public MustInherit Class Diseasecategory
         Return likelihood
     End Function
 
-    Public Function calcBMI(ByVal weight As Double, ByVal height As Double) As Double
-        Return weight / height ^ 2
-    End Function
+
 
     Public MustOverride Function medicament(x As Integer) As String
 
