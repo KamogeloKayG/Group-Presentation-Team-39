@@ -13,7 +13,7 @@ Option Infer Off
 Imports System.IO
 
 Public MustInherit Class Diseasecategory
-    Inherits report
+
 
     Private likelihood As String
 
@@ -38,22 +38,5 @@ Public MustInherit Class Diseasecategory
     End Function
 
     Public MustOverride Function medicament(x As Integer) As String
-
-
-    Public Overrides Function Prevent() As String
-        Dim prevents As String
-
-        Select Case likelihood
-            Case "Viral"
-                prevents = "Eat healthily. Take your vitamins. Wash/ Sanitize your hands often. Get enough sleep"
-            Case "Bacterial"
-                prevents = "Strep Throat, Salmonella, Tuberculosis, STDs"
-            Case "Auto-Immune"
-                prevents = "Arthritis, Multiple Sclerosis, Type 1 Diabetes, Lupus, Crohn's Disease"
-        End Select
-
-        Return MyBase.prevention + prevents
-
-    End Function
 
 End Class
