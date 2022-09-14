@@ -6,7 +6,7 @@ Public Class Viral
 
     Private _report As report
     Private _age As Integer
-    Private _gender As Boolean
+    Private _female As Boolean
     Private _sexualActivity As Integer
     Private _drugintake As Integer
     Private _chances As Integer
@@ -18,13 +18,13 @@ Public Class Viral
             _age = value
         End Set
     End Property
-    Public Property gender As Boolean
+    Public Property female As Boolean
         Get
-            Return _gender
+            Return _female
 
         End Get
         Set(value As Boolean)
-            _gender = value
+            _female = value
         End Set
     End Property
     Public Property SexualActivity As Integer
@@ -46,14 +46,14 @@ Public Class Viral
         End Set
     End Property
 
-    Public Function Chnces() As Integer
-        If _sexualActivity > 10 Then
-            _chances = 50%
-        Else
-            _chances = 0
-        End If
-        Return _chances
-    End Function
+    'Public Function Chnces() As Integer
+    '    If _sexualActivity > 10 Then
+    '        _chances = 50%
+    '    Else
+    '        _chances = 0
+    '    End If
+    '    Return _chances
+    'End Function
 
     Public Property report As report
         Get

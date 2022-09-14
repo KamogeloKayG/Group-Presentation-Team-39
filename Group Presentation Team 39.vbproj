@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="Autoimmune.vb" />
     <Compile Include="Bacterial.vb" />
+    <Compile Include="Diabetes.vb" />
     <Compile Include="Diseasecategory.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
