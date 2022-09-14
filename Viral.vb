@@ -52,15 +52,6 @@ Public Class Viral
         End Set
     End Property
 
-    'Public Function Chnces() As Integer
-    '    If _sexualActivity > 10 Then
-    '        _chances = 50%
-    '    Else
-    '        _chances = 0
-    '    End If
-    '    Return _chances
-    'End Function
-
     Public Property report As report
         Get
             Return _report

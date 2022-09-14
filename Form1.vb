@@ -86,5 +86,6 @@ Public Class Form1
             counterviral += 1
         End If
 
+
     End Sub
 End Class
