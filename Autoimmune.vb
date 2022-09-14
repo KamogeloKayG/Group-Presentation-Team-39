@@ -12,7 +12,7 @@
     Private _exebvirus As Boolean
 
     Public Sub New()
-
+        MyBase.New()
     End Sub
     Public Property type() As String
         Get
@@ -125,7 +125,7 @@
         Return type
     End Function
     'states the treatment specific to the type of autoimmune disease at hand
-    Public Function Medicament(x As Integer) As String
+    Public Overrides Function Medicament(x As Integer) As String
         Select Case x
             Case 1
                 treatment = "Insulin"
@@ -143,8 +143,6 @@
         Return treatment
     End Function
 
-    Public Overrides Function medicament(x As Integer) As String
-        Throw New NotImplementedException()
-    End Function
+
 End Class
 
