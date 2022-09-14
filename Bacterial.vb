@@ -12,6 +12,10 @@ Public Class Bacterial
     Private _smoking As Boolean
     Private _regularphysicalactivity As Boolean
 
+    Public Sub New()
+        MyBase.New()
+    End Sub
+
     Public Property unprotectedsex As Boolean
         Get
             Return _unprotectedsex

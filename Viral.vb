@@ -10,6 +10,10 @@ Public Class Viral
     Private _sexualActivity As Integer
     Private _drugintake As Integer
     Private _chances As Integer
+
+    Public Sub New()
+        MyBase.New()
+    End Sub
     Public Property age As Integer
         Get
             Return _age
