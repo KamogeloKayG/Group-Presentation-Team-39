@@ -37,6 +37,10 @@ Public MustInherit Class Diseasecategory
         Return likelihood
     End Function
 
+    Public Function calcBMI(ByVal weight As Double, ByVal height As Double) As Double
+        Return weight / height ^ 2
+    End Function
+
     Public MustOverride Function medicament(x As Integer) As String
 
 

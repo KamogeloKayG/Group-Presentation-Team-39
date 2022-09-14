@@ -12,7 +12,9 @@ Public Class Viral
     Private _chances As Integer
 
     Public Sub New()
+
         MyBase.New
+
     End Sub
     Public Property age As Integer
         Get
