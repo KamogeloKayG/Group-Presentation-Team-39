@@ -25,6 +25,7 @@ Partial Class Form1
         Me.Checkboxsmoke = New System.Windows.Forms.CheckBox()
         Me.checkboxAnxmeds = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.CheckBoxhighbloodmeds = New System.Windows.Forms.CheckBox()
         Me.CheckBoxhivpositive = New System.Windows.Forms.CheckBox()
         Me.CheckBoxexebvirus = New System.Windows.Forms.CheckBox()
         Me.CheckBoxcholesterolmeds = New System.Windows.Forms.CheckBox()
@@ -35,7 +36,6 @@ Partial Class Form1
         Me.txtgender = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.CheckBoxhighbloodmeds = New System.Windows.Forms.CheckBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtage = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -81,6 +81,16 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Select all that apply"
+        '
+        'CheckBoxhighbloodmeds
+        '
+        Me.CheckBoxhighbloodmeds.AutoSize = True
+        Me.CheckBoxhighbloodmeds.Location = New System.Drawing.Point(191, 213)
+        Me.CheckBoxhighbloodmeds.Name = "CheckBoxhighbloodmeds"
+        Me.CheckBoxhighbloodmeds.Size = New System.Drawing.Size(133, 20)
+        Me.CheckBoxhighbloodmeds.TabIndex = 9
+        Me.CheckBoxhighbloodmeds.Text = "High Blood Meds"
+        Me.CheckBoxhighbloodmeds.UseVisualStyleBackColor = True
         '
         'CheckBoxhivpositive
         '
@@ -176,16 +186,6 @@ Partial Class Form1
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "View Results"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'CheckBoxhighbloodmeds
-        '
-        Me.CheckBoxhighbloodmeds.AutoSize = True
-        Me.CheckBoxhighbloodmeds.Location = New System.Drawing.Point(191, 213)
-        Me.CheckBoxhighbloodmeds.Name = "CheckBoxhighbloodmeds"
-        Me.CheckBoxhighbloodmeds.Size = New System.Drawing.Size(133, 20)
-        Me.CheckBoxhighbloodmeds.TabIndex = 9
-        Me.CheckBoxhighbloodmeds.Text = "High Blood Meds"
-        Me.CheckBoxhighbloodmeds.UseVisualStyleBackColor = True
         '
         'Label2
         '

@@ -9,7 +9,7 @@ Public Class Viral
     Private _female As Boolean
     Private _sexualActivity As Integer
     Private _drugintake As Integer
-    Private _chances As Integer
+
 
     Public Sub New()
 
