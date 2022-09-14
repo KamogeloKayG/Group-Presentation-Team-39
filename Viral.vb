@@ -3,7 +3,7 @@ Option Explicit On
 Option Infer Off
 
 Public Class Viral
-
+    Inherits Diseasecategory
     Private _report As report
     Private _age As Integer
     Private _female As Boolean
@@ -12,7 +12,7 @@ Public Class Viral
     Private _chances As Integer
 
     Public Sub New()
-        MyBase.New()
+        MyBase.New
     End Sub
     Public Property age As Integer
         Get
@@ -67,4 +67,25 @@ Public Class Viral
             _report = value
         End Set
     End Property
+
+    Public Overrides Function medicament(x As Integer) As String
+        Dim treatment As String
+        treatment = ""
+        Select Case x
+            Case 1
+                treatment = "ARVS"
+            Case 2
+                treatment = "ACETAMINOPHEN"
+            Case 3
+                treatment = "ACYCLOVIR"
+                'Case 4
+                'treatment = " Corticosteroids"
+                'Case 5
+                'treatment = "Repigmentation therapy and light therapy"
+        End Select
+
+        Return treatment
+        'End Select
+        'Return treatment
+    End Function
 End Class
