@@ -1,5 +1,6 @@
 ﻿Public Class Autoimmune
     Inherits Diseasecategory
+
     Implements Diabetes
     Private _type As String
     Private _treatment As String
@@ -142,6 +143,8 @@
         Return treatment
     End Function
 
-
+    Public Overrides Function medicament(x As Integer) As String
+        Throw New NotImplementedException()
+    End Function
 End Class
 

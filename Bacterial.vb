@@ -102,30 +102,30 @@ Public Class Bacterial
 
     End Function
 
-    Public Function medicament(x As String) As String
+    Public Function medicament(x As Integer) As String
         Dim treatment As String
         treatment = ""
         Select Case x
-            Case "Cerebrospinal (CSF) Fluid Culture"
+            Case 1
                 treatment = "Ampicillin"
 
 
-            Case "Stool Culture"
+            Case 2
                 treatment = "Amoxicillin or Ampicillin"
 
-            Case "Throat Culture"
+            Case 3
 
                 treatment = "Penicillin or Amoxicillin"
 
-            Case "Sputum Culture"
+            Case 4
 
                 treatment = "Azithromycin or Erythromycin"
 
-            Case "Urine Culture"
+            Case 5
 
                 treatment = "Trimethoprim"
 
-            Case "Wound Culture"
+            Case 6
 
                 treatment = "Amoxicilin-Clavulanate"
         End Select
