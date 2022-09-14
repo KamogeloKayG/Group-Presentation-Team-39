@@ -10,7 +10,7 @@ Public Class Bacterial
     Private _obese As Boolean
     Private _contactwithaninfectedperson As Boolean
     Private _smoking As Boolean
-    Private _regularphysicalactivity As Boolean
+    Private _nophysicalactivity As Boolean
 
     Public Sub New()
         MyBase.New()

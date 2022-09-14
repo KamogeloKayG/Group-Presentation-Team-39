@@ -45,6 +45,10 @@ Public Class Form1
 
         End If
 
+        If CheckBoxregularPactivity.Checked Then
+            counterbacterial += 1
+        End If
+
         If CheckBoxObese.Checked Then
             counterbacterial += 1
             counteraimmune += 1
