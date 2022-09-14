@@ -80,8 +80,9 @@ Public Class Form1
 
         End If
 
-        If txtdrugintake.Text = CStr(10) Then
-            viral.Drugs = 10
+
+        viral.Drugs = CInt(txtdrugintake.Text)
+        If viral.Drugs >= 10 Then
             counterviral += 1
         End If
 
