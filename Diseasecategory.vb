@@ -13,12 +13,12 @@ Option Infer Off
 Imports System.IO
 
 Public MustInherit Class Diseasecategory
-    Inherits report
+
 
     Private likelihood As String
-
+    Private report As report
     Public Sub New()
-
+        report = New report
     End Sub
 
     Private Function likely(viralperc As Double, autoimmuneperc As Double, bacperc As Double) As String
