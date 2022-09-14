@@ -69,31 +69,22 @@ Public Class Viral
     End Property
 
     Public Overrides Function medicament(x As Integer) As String
-        'Dim treatment As String
-        'treatment = ""
-        'Select Case x
-        '    Case "Cerebrospinal (CSF) Fluid Culture"
-        '        treatment = "Ampicillin"
+        Dim treatment As String
+        treatment = ""
+        Select Case x
+            Case 1
+                treatment = "ARVS"
+        Case 2
+        treatment = "ACETAMINOPHEN"
+        Case 3
+        treatment = "ACYCLOVIR"
+        'Case 4
+        'treatment = " Corticosteroids"
+        'Case 5
+        'treatment = "Repigmentation therapy and light therapy"
+        End Select
 
-
-        '    Case "Stool Culture"
-        '        treatment = "Amoxicillin or Ampicillin"
-
-        '    Case "Throat Culture"
-
-        '        treatment = "Penicillin or Amoxicillin"
-
-        '    Case "Sputum Culture"
-
-        '        treatment = "Azithromycin or Erythromycin"
-
-        '    Case "Urine Culture"
-
-        '        treatment = "Trimethoprim"
-
-        '    Case "Wound Culture"
-
-        '        treatment = "Amoxicilin-Clavulanate"
+        Return treatment
         'End Select
         'Return treatment
     End Function
