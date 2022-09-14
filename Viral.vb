@@ -9,7 +9,7 @@ Public Class Viral
     Private _female As Boolean
     Private _sexualActivity As Integer
     Private _drugintake As Integer
-    Private _chances As Integer
+
 
     Public Sub New()
 
@@ -51,15 +51,6 @@ Public Class Viral
             _drugintake = value
         End Set
     End Property
-
-    'Public Function Chnces() As Integer
-    '    If _sexualActivity > 10 Then
-    '        _chances = 50%
-    '    Else
-    '        _chances = 0
-    '    End If
-    '    Return _chances
-    'End Function
 
     Public Property report As report
         Get
