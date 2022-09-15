@@ -55,8 +55,8 @@ Public MustInherit Class Diseasecategory
 
     Public Function Prevent(x As String) As String
         Dim prevents As String
-        prevents = x
-        Select Case likelihood
+        prevents = ""
+        Select Case x
             Case "V"
                 prevents = "1. Eat healthily." & vbNewLine & "2. Take your vitamins." & vbNewLine & "3. Wash/ Sanitize your hands often." & vbNewLine & "4. Get enough sleep"
             Case "Bacterial"
