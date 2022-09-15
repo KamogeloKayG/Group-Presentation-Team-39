@@ -15,18 +15,12 @@ Imports System.IO
 Public MustInherit Class Diseasecategory
 
 
-    Private _likelihood As String
+    Private likelihood As String
     Private _report As report
     Public Sub New()
         _report = New report
     End Sub
-    Public Property likelihood As String
-        Get
-            Return _likelihood
-        End Get
-        Set(value As String)
-            _likelihood = value
-        End Set
+   
     End Property
 
     Public Function likely(viralperc As Double, autoimmuneperc As Double, bacperc As Double) As String
