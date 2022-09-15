@@ -1,8 +1,8 @@
 ﻿'*******************************************************************************
 'Team Number: 39
 'Team Member Details: Mabatha KA 221077585
+'Team Member Details:Maposa T 222078730
 'Team Member Details: Mogoane, M (222002111)
-'Team Member Details:
 'Team Member Details:
 'Practical: Team Project
 'Class Name: DiseaseCategory

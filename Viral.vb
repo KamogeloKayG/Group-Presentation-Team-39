@@ -60,7 +60,25 @@ Public Class Viral
             _report = value
         End Set
     End Property
+    Public Function Aspect(x As Integer) As String
+        Dim test As String
+        test = ""
+        Select Case x
 
+            Case 1
+                test = "Sexual Tranmitted viral disease"
+
+            Case 2
+                test = "Influenza  or lung effecting viral disease "
+
+            Case 3
+                test = "You have a general viral disease"
+
+
+
+        End Select
+        Return test
+    End Function
     Public Overrides Function medicament(x As Integer) As String
         Dim treatment As String
         treatment = ""

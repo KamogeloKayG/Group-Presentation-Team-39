@@ -5,6 +5,8 @@ Imports System.IO
 
 Public Class Form1
     Private counterviral, counteraimmune, counterbacterial As Integer
+
+
     Private diseasecategory() As Diseasecategory
 
 
@@ -106,6 +108,7 @@ Public Class Form1
         viralperc = counterviral / 4 * 100
 
         Dim highest As String
+        Dim sort As Integer
         'file
         Dim write As StreamWriter
         write = File.AppendText("Viral.txt")
@@ -144,14 +147,7 @@ Public Class Form1
                 Rtxtdisplay.Text = "You are more likely to have a Bacterial Disease" & vbNewLine & vbNewLine & "A culture test can help find harmful bacteria in or on your body that is making you sick." & vbNewLine & whichtest & vbNewLine & vbNewLine & "Medication" & vbNewLine & med & vbNewLine & vbNewLine & "Prevention" & vbNewLine & bac.prevention
                 diseasecategory(3) = bac
             Case "Auto-Immune"
- Dim write As StreamWriter
-        write = File.AppendText("Viral.txt")
-        write.WriteLine("Amount of drugs taken " & CStr(viral.Drugs))
-        write.WriteLine("Age of user " & CStr(viral.age))
-        write.WriteLine(viralperc)
-        write.WriteLine(viral.Aspect(sort))
-        write.WriteLine(viral.medicament(sort))
-        write.Close()
+
 
         End Select
     End Sub
