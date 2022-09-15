@@ -10,13 +10,14 @@ Option Explicit On
 Option Infer Off
 
 Public Class user_report
-
+    'logic
 
     Private _usersName As String
     Private _weight As Double
     Private _height As Double
     Private _bloodsugarlevel As Double
 
+    'property methods
     Public Property bloodsugarlevel As Double
         Get
             Return _bloodsugarlevel
@@ -50,7 +51,7 @@ Public Class user_report
             _height = value
         End Set
     End Property
-
+    'methods
     Public Function BMI(weight As Double, height As Double) As Double
         Return (weight / height) ^ 2
     End Function

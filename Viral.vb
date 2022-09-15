@@ -10,6 +10,7 @@ Option Explicit On
 Option Infer Off
 
 Public Class Viral
+    'logic
     Inherits Diseasecategory
     Private _userreport As user_report
 
@@ -19,12 +20,13 @@ Public Class Viral
     Private _sexualActivity As Integer
     Private _drugintake As Integer
 
-
+    'constructor
     Public Sub New()
 
         MyBase.New()
 
     End Sub
+    'property methods
     Public Property age As Integer
         Get
             Return _age
@@ -69,6 +71,7 @@ Public Class Viral
             _drugintake = value
         End Set
     End Property
+    'methods
     Public Function Aspect(x As Integer) As String
         Dim test As String
         test = ""

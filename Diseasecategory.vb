@@ -13,14 +13,15 @@ Option Infer Off
 Imports System.IO
 
 Public MustInherit Class Diseasecategory
-
+    'logic
     Private _prevention As String
     Private likelihood As String
     Private _report As user_report
+    'constructor
     Public Sub New()
         _report = New user_report
     End Sub
-
+    'properties
     Public Property prevention As String
         Get
             Return _prevention
@@ -38,7 +39,7 @@ Public MustInherit Class Diseasecategory
         End Set
     End Property
 
-
+    'methods(functions)
     Public Function likely(viralperc As Double, autoimmuneperc As Double, bacperc As Double) As String
         If (viralperc > bacperc) And (viralperc > autoimmuneperc) Then
             likelihood = "Viral"
@@ -65,7 +66,7 @@ Public MustInherit Class Diseasecategory
         prevents = ""
         Select Case x
             Case "V"
-                prevents = "1. Eat healthily." & vbNewLine & "2. Take your vitamins." & vbNewLine & "3. Wash/ Sanitize your hands often." & vbNewLine & "4. Get enough sleep"
+                prevents = "1. Eat healthily." & vbNewLine & "2. Take your vitamins." & vbNewLine & "3. Wash/ Sanitize your hands often." & vbNewLine & "4. Get enough sleep" & vbNewLine & "5. Avoid having to many casual sexual partner " & vbNewLine & "6. Always use protection in your daily life such as condoms, masks and ect" & vbNewLine & " 7. Overall keep yourself safe all the time"
             Case "Bacterial"
                 prevents = "1. Avoid clse contact with sick people. " & vbNewLine & "2. Cover coughs and sneezes. " & vbNewLine & "3. Avoid touching your face. " & vbNewLine & "4. Stay home if you are sick. " & vbNewLine & "5. Clean and disinfect surfaces that are touched often. " & vbNewLine & "6. Avoid contaminated food and water"
             Case "Auto-Immune"

@@ -11,13 +11,17 @@ Option Infer Off
 Imports System.IO
 
 Public Class frmDisease
+    'logic
     Private counterviral, counteraimmune, counterbacterial As Integer
+
+
 
     Private diseasecategory() As Diseasecategory
 
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'creating instances
         Dim bmi As Double
         ReDim diseasecategory(3)
         Dim bac As Bacterial
@@ -126,14 +130,14 @@ Public Class frmDisease
 
         Dim highest As String
         Dim sort As Integer
-        'file
+
         'calculating hightst percentage
         highest = bac.likely(viralperc, aimmuneperc, bacperc)
 
         aimmune.userreport = userreport
         Select Case highest
             Case "Viral"
-
+                'determining that part where it affects in order to specify the the sort of viral disease it is
                 sort = CInt(InputBox("WHAT sort of the following apply to you
 1-Sexual organs feeling unease and un explained wounds after sexual activity
 2-Sneezing and nose blockages /coughning
@@ -142,7 +146,8 @@ Public Class frmDisease
                 viral.Aspect(sort)
                 viral.medicament(sort)
                 viral.prevention = "To prevent getting a viral disease you must do the following: " & vbNewLine & viral.Prevent("V")
-                Rtxtdisplay.Text = "You are more likely to have a viral Disease" & vbNewLine & vbNewLine & "Caused due to viral infection; may be transmitted through contaminated air, water, food or contact." & vbNewLine & "You may specifically have " & viral.Aspect(sort) & vbNewLine & vbNewLine & "The treatmeant you will need is: " & viral.medicament(sort) & vbNewLine & viral.prevention
+                'displaying
+                Rtxtdisplay.Text = "You are more likely to have a viral Disease" & vbNewLine & vbNewLine & "Caused due to viral infection; may be transmitted through contaminated air, water, food or contact." & vbNewLine & "You may specifically have " & viral.Aspect(sort) & vbNewLine & vbNewLine & "The treatmeant you will need is: " & viral.medicament(sort) & vbNewLine & vbNewLine & viral.prevention
 
                 diseasecategory(1) = viral
             Case "Bacterial"
