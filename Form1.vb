@@ -104,13 +104,27 @@ Public Class Form1
 
         Dim highest As String
         highest = bac.likely(viralperc, aimmuneperc, bacperc)
-
+        MsgBox(highest)
         Select Case highest
             Case "Viral"
 
             Case "Bacterial"
+                Dim prevention As String
+                Dim med As String
+                Dim condition As Integer
+                Dim whichtest As String
+                condition = CInt(InputBox("Which of the following have you experienced lately?" & vbNewLine & "1: Pain in spinal cord (back pain)" & vbNewLine & "2: Stomach Pain" & vbNewLine & "3: Pain in throat" & vbNewLine & "4: Difficulty in breathing" & vbNewLine & "5: Bloody urine or pain after urinating" & vbNewLine & "6: An Open Wound "))
+                whichtest = "Go to a doctor and ask for a " & bac.culturetest(condition) & " to confirm if you have a bacterial infection."
+                med = "Medicine that is commonly associated with " & bac.culturetest(condition) & " is " & bac.medicament(condition) & "."
+                '  MsgBox(whichtest)
 
+                ' MsgBox(med)
+                prevention = "To prevent getting a bacterial disease you must do the following: " & vbNewLine & bac.Prevent("Bacterial")
+                ' MsgBox(prevention)
+                Rtxtdisplay.Text = "You are more likely to have a Bacterial Disease" & vbNewLine & vbNewLine & "A culture test can help find harmful bacteria in or on your body that is making you sick." & vbNewLine & whichtest & vbNewLine & vbNewLine & "Medication" & vbNewLine & med & vbNewLine & vbNewLine & "Prevention" & vbNewLine & prevention
             Case "Auto-Immune"
+
+
         End Select
     End Sub
 End Class

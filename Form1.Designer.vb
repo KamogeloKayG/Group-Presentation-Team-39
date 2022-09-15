@@ -40,6 +40,7 @@ Partial Class Form1
         Me.txtage = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtdrugintake = New System.Windows.Forms.TextBox()
+        Me.Rtxtdisplay = New System.Windows.Forms.RichTextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,7 +48,7 @@ Partial Class Form1
         '
         Me.Checkboxsmoke.AutoSize = True
         Me.Checkboxsmoke.Location = New System.Drawing.Point(4, 17)
-        Me.Checkboxsmoke.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Checkboxsmoke.Margin = New System.Windows.Forms.Padding(2)
         Me.Checkboxsmoke.Name = "Checkboxsmoke"
         Me.Checkboxsmoke.Size = New System.Drawing.Size(59, 17)
         Me.Checkboxsmoke.TabIndex = 0
@@ -58,7 +59,7 @@ Partial Class Form1
         '
         Me.checkboxAnxmeds.AutoSize = True
         Me.checkboxAnxmeds.Location = New System.Drawing.Point(4, 49)
-        Me.checkboxAnxmeds.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.checkboxAnxmeds.Margin = New System.Windows.Forms.Padding(2)
         Me.checkboxAnxmeds.Name = "checkboxAnxmeds"
         Me.checkboxAnxmeds.Size = New System.Drawing.Size(115, 17)
         Me.checkboxAnxmeds.TabIndex = 1
@@ -78,10 +79,10 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.Checkboxsmoke)
         Me.GroupBox1.Controls.Add(Me.checkboxAnxmeds)
         Me.GroupBox1.Location = New System.Drawing.Point(34, 115)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(724, 213)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(402, 213)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Select all that apply"
@@ -90,7 +91,7 @@ Partial Class Form1
         '
         Me.CheckBoxhighbloodmeds.AutoSize = True
         Me.CheckBoxhighbloodmeds.Location = New System.Drawing.Point(143, 173)
-        Me.CheckBoxhighbloodmeds.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBoxhighbloodmeds.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBoxhighbloodmeds.Name = "CheckBoxhighbloodmeds"
         Me.CheckBoxhighbloodmeds.Size = New System.Drawing.Size(107, 17)
         Me.CheckBoxhighbloodmeds.TabIndex = 9
@@ -101,7 +102,7 @@ Partial Class Form1
         '
         Me.CheckBoxhivpositive.AutoSize = True
         Me.CheckBoxhivpositive.Location = New System.Drawing.Point(143, 86)
-        Me.CheckBoxhivpositive.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBoxhivpositive.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBoxhivpositive.Name = "CheckBoxhivpositive"
         Me.CheckBoxhivpositive.Size = New System.Drawing.Size(84, 17)
         Me.CheckBoxhivpositive.TabIndex = 8
@@ -112,7 +113,7 @@ Partial Class Form1
         '
         Me.CheckBoxexebvirus.AutoSize = True
         Me.CheckBoxexebvirus.Location = New System.Drawing.Point(143, 49)
-        Me.CheckBoxexebvirus.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBoxexebvirus.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBoxexebvirus.Name = "CheckBoxexebvirus"
         Me.CheckBoxexebvirus.Size = New System.Drawing.Size(72, 17)
         Me.CheckBoxexebvirus.TabIndex = 7
@@ -123,7 +124,7 @@ Partial Class Form1
         '
         Me.CheckBoxcholesterolmeds.AutoSize = True
         Me.CheckBoxcholesterolmeds.Location = New System.Drawing.Point(143, 17)
-        Me.CheckBoxcholesterolmeds.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBoxcholesterolmeds.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBoxcholesterolmeds.Name = "CheckBoxcholesterolmeds"
         Me.CheckBoxcholesterolmeds.Size = New System.Drawing.Size(133, 17)
         Me.CheckBoxcholesterolmeds.TabIndex = 6
@@ -134,7 +135,7 @@ Partial Class Form1
         '
         Me.CheckBoxregularPactivity.AutoSize = True
         Me.CheckBoxregularPactivity.Location = New System.Drawing.Point(4, 129)
-        Me.CheckBoxregularPactivity.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBoxregularPactivity.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBoxregularPactivity.Name = "CheckBoxregularPactivity"
         Me.CheckBoxregularPactivity.Size = New System.Drawing.Size(102, 30)
         Me.CheckBoxregularPactivity.TabIndex = 5
@@ -145,7 +146,7 @@ Partial Class Form1
         '
         Me.CheckBoxObese.AutoSize = True
         Me.CheckBoxObese.Location = New System.Drawing.Point(4, 174)
-        Me.CheckBoxObese.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBoxObese.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBoxObese.Name = "CheckBoxObese"
         Me.CheckBoxObese.Size = New System.Drawing.Size(57, 17)
         Me.CheckBoxObese.TabIndex = 4
@@ -156,18 +157,18 @@ Partial Class Form1
         '
         Me.CheckBoxcontact.AutoSize = True
         Me.CheckBoxcontact.Location = New System.Drawing.Point(143, 129)
-        Me.CheckBoxcontact.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBoxcontact.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBoxcontact.Name = "CheckBoxcontact"
-        Me.CheckBoxcontact.Size = New System.Drawing.Size(66, 17)
+        Me.CheckBoxcontact.Size = New System.Drawing.Size(256, 17)
         Me.CheckBoxcontact.TabIndex = 3
-        Me.CheckBoxcontact.Text = "Contact "
+        Me.CheckBoxcontact.Text = "Contact with someone who has bacterial disease"
         Me.CheckBoxcontact.UseVisualStyleBackColor = True
         '
         'CheckBoxUnprotectedsex
         '
         Me.CheckBoxUnprotectedsex.AutoSize = True
         Me.CheckBoxUnprotectedsex.Location = New System.Drawing.Point(4, 86)
-        Me.CheckBoxUnprotectedsex.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.CheckBoxUnprotectedsex.Margin = New System.Windows.Forms.Padding(2)
         Me.CheckBoxUnprotectedsex.Name = "CheckBoxUnprotectedsex"
         Me.CheckBoxUnprotectedsex.Size = New System.Drawing.Size(106, 17)
         Me.CheckBoxUnprotectedsex.TabIndex = 2
@@ -177,7 +178,7 @@ Partial Class Form1
         'txtgender
         '
         Me.txtgender.Location = New System.Drawing.Point(113, 54)
-        Me.txtgender.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtgender.Margin = New System.Windows.Forms.Padding(2)
         Me.txtgender.Name = "txtgender"
         Me.txtgender.Size = New System.Drawing.Size(76, 20)
         Me.txtgender.TabIndex = 3
@@ -195,7 +196,7 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(35, 364)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(266, 63)
         Me.Button1.TabIndex = 5
@@ -215,7 +216,7 @@ Partial Class Form1
         'txtage
         '
         Me.txtage.Location = New System.Drawing.Point(319, 45)
-        Me.txtage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtage.Margin = New System.Windows.Forms.Padding(2)
         Me.txtage.Name = "txtage"
         Me.txtage.Size = New System.Drawing.Size(76, 20)
         Me.txtage.TabIndex = 11
@@ -233,16 +234,25 @@ Partial Class Form1
         'txtdrugintake
         '
         Me.txtdrugintake.Location = New System.Drawing.Point(578, 42)
-        Me.txtdrugintake.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtdrugintake.Margin = New System.Windows.Forms.Padding(2)
         Me.txtdrugintake.Name = "txtdrugintake"
         Me.txtdrugintake.Size = New System.Drawing.Size(76, 20)
         Me.txtdrugintake.TabIndex = 13
+        '
+        'Rtxtdisplay
+        '
+        Me.Rtxtdisplay.Location = New System.Drawing.Point(461, 115)
+        Me.Rtxtdisplay.Name = "Rtxtdisplay"
+        Me.Rtxtdisplay.Size = New System.Drawing.Size(302, 299)
+        Me.Rtxtdisplay.TabIndex = 14
+        Me.Rtxtdisplay.Text = ""
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Rtxtdisplay)
         Me.Controls.Add(Me.txtdrugintake)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtage)
@@ -278,4 +288,5 @@ Partial Class Form1
     Friend WithEvents txtage As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtdrugintake As TextBox
+    Friend WithEvents Rtxtdisplay As RichTextBox
 End Class

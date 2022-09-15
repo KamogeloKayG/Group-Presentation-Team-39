@@ -42,16 +42,16 @@ Public MustInherit Class Diseasecategory
     Public MustOverride Function medicament(x As Integer) As String
 
 
-    Public Function Prevent() As String
+    Public Function Prevent(x As String) As String
         Dim prevents As String
-        prevents = ""
+        prevents = x
         Select Case likelihood
             Case "Viral"
-                prevents = "Eat healthily. Take your vitamins. Wash/ Sanitize your hands often. Get enough sleep"
+                prevents = "1. Eat healthily." & vbNewLine & "2. Take your vitamins." & vbNewLine & "3. Wash/ Sanitize your hands often." & vbNewLine & "4. Get enough sleep"
             Case "Bacterial"
-                prevents = "Avoid clse contact with sick people. Cover coughs and sneezes. Avoid touching your face. Stay home if you are sick. Clean and disinfect surfaces that are touched often. Avoid contaminated food and water"
+                prevents = "1. Avoid clse contact with sick people. " & vbNewLine & "2. Cover coughs and sneezes. " & vbNewLine & "3. Avoid touching your face. " & vbNewLine & "4. Stay home if you are sick. " & vbNewLine & "5. Clean and disinfect surfaces that are touched often. " & vbNewLine & "6. Avoid contaminated food and water"
             Case "Auto-Immune"
-                prevents = "Exercise consistently. Stay away from cigarettes. Avoid toxins. Maintain a healthy diet. Limit processed foods from your diet"
+                prevents = "1. Exercise consistently." & vbNewLine & "2. Stay away from cigarettes." & vbNewLine & "3. Avoid toxins." & vbNewLine & "4. Maintain a healthy diet." & vbNewLine & "5. Limit processed foods from your diet"
         End Select
 
         Return prevents
