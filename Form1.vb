@@ -7,6 +7,7 @@ Public Class Form1
     Private counterviral, counteraimmune, counterbacterial As Integer
 
 
+
     Private diseasecategory() As Diseasecategory
 
 
@@ -121,16 +122,18 @@ Public Class Form1
         ' MsgBox(highest)
         Select Case highest
             Case "Viral"
-
+                MsgBox("IT IS A VIRAL DISEASE!!")
                 sort = CInt(InputBox("WHAT sort of the following apply to you
 1-Sexual organs feeling unease and un explained wounds after sexual activity
 2-Sneezing and nose blockages /coughning
 3-Unusual symptoms"))
 
                 viral.Aspect(sort)
-                MsgBox("The treatmeant you will need is: " & viral.medicament(sort))
-                viral.Prevent("Viral")
+                viral.medicament(sort)
+                viral.prevention = "To prevent getting a viral disease you must do the following: " & vbNewLine & viral.Prevent("1. Eat healthily." & vbNewLine & "2. Take your vitamins." & vbNewLine & "3. Wash/ Sanitize your hands often." & vbNewLine & "4. Get enough sleep")
+                Rtxtdisplay.Text = "You are more likely to have a viral Disease" & vbNewLine & vbNewLine & "Caused due to viral infection; may be transmitted through contaminated air, water, food or contact." & vbNewLine & "You may specifically have " & viral.Aspect(sort) & vbNewLine & vbNewLine & "The treatmeant you will need is: " & viral.medicament(sort) & vbNewLine & viral.prevention
 
+                diseasecategory(1) = viral
             Case "Bacterial"
 
                 Dim med As String
@@ -147,8 +150,29 @@ Public Class Form1
                 Rtxtdisplay.Text = "You are more likely to have a Bacterial Disease" & vbNewLine & vbNewLine & "A culture test can help find harmful bacteria in or on your body that is making you sick." & vbNewLine & whichtest & vbNewLine & vbNewLine & "Medication" & vbNewLine & med & vbNewLine & vbNewLine & "Prevention" & vbNewLine & bac.prevention
                 diseasecategory(3) = bac
             Case "Auto-Immune"
+                Dim temp As Integer
+                Dim bloodsugarlevel As Double
+                Dim text As String = ""
+                For i As Integer = 1 To 3
+                    aimmune = TryCast(diseasecategory(i), Autoimmune)
+                    If Not (aimmune Is Nothing) Then
+                        temp = CInt((InputBox("Enter organ that the pain is situated" & Environment.NewLine & "1.The beta cells of the endocrine pancreas" & Environment.NewLine & "2.Thyroid" & Environment.NewLine & "3.gastric parietal cells" & Environment.NewLine & "4.adrenal and ovary" & Environment.NewLine & "5.Skin")))
+                        If temp = 1 Then
+                            bloodsugarlevel = CDbl(InputBox("Enter your blood sugar level"))
+                            aimmune.Diabetic(bloodsugarlevel)
+                        End If
+                        aimmune.autoimmumetype(temp)
+                        aimmune.Medicament(temp)
+                        aimmune.prevention = "To reduce the risk of having an autoimmune disease follow these preventitive measures:" & Environment.NewLine & aimmune.Prevent("Auto-Immune")
+                        text &= "You are susceptible to having an autoimmune disease" & Environment.NewLine
+                        text &= "The type of autoimmune disease that you are susceptile to is:" & Environment.NewLine & aimmune.autoimmumetype(temp) & Environment.NewLine
+                        text &= "The treatment you should take is:" & Environment.NewLine & aimmune.Medicament(temp) & Environment.NewLine
+                        text &= aimmune.prevention
+                        Rtxtdisplay.Text = text
 
-
+                    End If
+                Next
+                diseasecategory(2) = aimmune
         End Select
     End Sub
 
