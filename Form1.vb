@@ -20,7 +20,7 @@ Public Class Form1
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        Dim bmi As Double
         ReDim diseasecategory(3)
         Dim bac As Bacterial
         bac = New Bacterial
@@ -34,7 +34,7 @@ Public Class Form1
         userreport.username = txtname.Text
         userreport.weight = CDbl(txtweight.Text)
         userreport.height = CDbl(txtweight.Text)
-
+        bmi = userreport.BMI(userreport.weight, userreport.height)
 
         If Checkboxsmoke.Checked Then
             counterbacterial += 1

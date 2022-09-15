@@ -51,7 +51,7 @@ Public Class user_report
         End Set
     End Property
 
-    Public Function BMI() As Double
+    Public Function BMI(weight As Double, height As Double) As Double
         Return (weight / height) ^ 2
     End Function
 End Class
