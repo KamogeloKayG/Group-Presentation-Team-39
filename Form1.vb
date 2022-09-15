@@ -137,7 +137,7 @@ Public Class Form1
 
                 viral.Aspect(sort)
                 viral.medicament(sort)
-                viral.prevention = "To prevent getting a viral disease you must do the following: " & vbNewLine & viral.Prevent("1. Eat healthily." & vbNewLine & "2. Take your vitamins." & vbNewLine & "3. Wash/ Sanitize your hands often." & vbNewLine & "4. Get enough sleep")
+                viral.prevention = "To prevent getting a viral disease you must do the following: " & vbNewLine & viral.Prevent("V")
                 Rtxtdisplay.Text = "You are more likely to have a viral Disease" & vbNewLine & vbNewLine & "Caused due to viral infection; may be transmitted through contaminated air, water, food or contact." & vbNewLine & "You may specifically have " & viral.Aspect(sort) & vbNewLine & vbNewLine & "The treatmeant you will need is: " & viral.medicament(sort) & vbNewLine & viral.prevention
 
                 diseasecategory(1) = viral
@@ -159,23 +159,25 @@ Public Class Form1
             Case "Auto-Immune"
                 Dim temp As Integer
                 Dim text As String = ""
-                aimmune = TryCast(diseasecategory(2), Autoimmune)
-                If Not (aimmune Is Nothing) Then
-                    temp = CInt((InputBox("Enter organ that the pain is situated" & Environment.NewLine & "1.The beta cells of the endocrine pancreas" & Environment.NewLine & "2.Thyroid" & Environment.NewLine & "3.gastric parietal cells" & Environment.NewLine & "4.adrenal and ovary" & Environment.NewLine & "5.Skin")))
-                    If temp = 1 Then
-                        aimmune.report.bloodsugarlevel = CDbl(InputBox("Enter your blood sugar level"))
-                        aimmune.Diabetic(aimmune.report.bloodsugarlevel)
-                    End If
-                    aimmune.autoimmumetype(temp)
-                    aimmune.Medicament(temp)
-                    aimmune.prevention = "To reduce the risk of having an autoimmune disease follow these preventitive measures:" & Environment.NewLine & aimmune.Prevent("Auto-Immune")
-                    text &= "You are susceptible to having an autoimmune disease" & Environment.NewLine
-                    text &= "The type of autoimmune disease that you are susceptile to is:" & Environment.NewLine & aimmune.autoimmumetype(temp) & Environment.NewLine
-                    text &= "The treatment you should take is:" & Environment.NewLine & aimmune.Medicament(temp) & Environment.NewLine
-                    text &= aimmune.prevention
-                    Rtxtdisplay.Text = text
-
+                'For i As Integer = 1 To 3
+                'aimmune = TryCast(diseasecategory(2), Autoimmune)
+                'If Not (aimmune Is Nothing) Then
+                temp = CInt((InputBox("Enter organ that the pain is situated" & Environment.NewLine & "1.The beta cells of the endocrine pancreas" & Environment.NewLine & "2.Thyroid" & Environment.NewLine & "3.gastric parietal cells" & Environment.NewLine & "4.adrenal and ovary" & Environment.NewLine & "5.Skin")))
+                If temp = 1 Then
+                    bloodsugarlevel = CDbl(InputBox("Enter your blood sugar level"))
+                    aimmune.Diabetic(bloodsugarlevel)
                 End If
+                aimmune.autoimmumetype(temp)
+                aimmune.Medicament(temp)
+                aimmune.prevention = "To reduce the risk of having an autoimmune disease follow these preventitive measures:" & Environment.NewLine & aimmune.Prevent("Auto-Immune")
+                text &= "You are susceptible to having an autoimmune disease" & Environment.NewLine
+                text &= "The type of autoimmune disease that you are susceptile to is:" & Environment.NewLine & aimmune.autoimmumetype(temp) & Environment.NewLine
+                text &= "The treatment you should take is:" & Environment.NewLine & aimmune.Medicament(temp) & Environment.NewLine
+                text &= aimmune.prevention
+                Rtxtdisplay.Text = text
+                MsgBox(aimmune.prevention)
+                ' End If
+                'Next
                 diseasecategory(2) = aimmune
         End Select
     End Sub
