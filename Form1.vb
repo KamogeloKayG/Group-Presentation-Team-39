@@ -7,6 +7,7 @@ Public Class Form1
     Private counterviral, counteraimmune, counterbacterial As Integer
 
 
+
     Private diseasecategory() As Diseasecategory
 
 
@@ -121,16 +122,18 @@ Public Class Form1
         ' MsgBox(highest)
         Select Case highest
             Case "Viral"
-
+                MsgBox("IT IS A VIRAL DISEASE!!")
                 sort = CInt(InputBox("WHAT sort of the following apply to you
 1-Sexual organs feeling unease and un explained wounds after sexual activity
 2-Sneezing and nose blockages /coughning
 3-Unusual symptoms"))
 
                 viral.Aspect(sort)
-                MsgBox("The treatmeant you will need is: " & viral.medicament(sort))
-                viral.Prevent("Viral")
+                viral.medicament(sort)
+                viral.prevention = "To prevent getting a viral disease you must do the following: " & vbNewLine & viral.Prevent("1. Eat healthily." & vbNewLine & "2. Take your vitamins." & vbNewLine & "3. Wash/ Sanitize your hands often." & vbNewLine & "4. Get enough sleep")
+                Rtxtdisplay.Text = "You are more likely to have a viral Disease" & vbNewLine & vbNewLine & "Caused due to viral infection; may be transmitted through contaminated air, water, food or contact." & vbNewLine & "You may specifically have " & viral.Aspect(sort) & vbNewLine & vbNewLine & "The treatmeant you will need is: " & viral.medicament(sort) & vbNewLine & viral.prevention
 
+                diseasecategory(1) = viral
             Case "Bacterial"
 
                 Dim med As String
