@@ -129,7 +129,7 @@ Public Class Form1
 
                 viral.Aspect(sort)
                 MsgBox("The treatmeant you will need is: " & viral.medicament(sort))
-
+                viral.Prevent("Viral")
 
             Case "Bacterial"
                 Dim prevention As String
