@@ -243,6 +243,7 @@ Partial Class Form1
         '
         Me.Rtxtdisplay.Location = New System.Drawing.Point(461, 115)
         Me.Rtxtdisplay.Name = "Rtxtdisplay"
+        Me.Rtxtdisplay.ReadOnly = True
         Me.Rtxtdisplay.Size = New System.Drawing.Size(302, 299)
         Me.Rtxtdisplay.TabIndex = 14
         Me.Rtxtdisplay.Text = ""
