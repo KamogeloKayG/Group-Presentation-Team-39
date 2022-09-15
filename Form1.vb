@@ -119,6 +119,15 @@ Public Class Form1
         Select Case highest
             Case "Viral"
 
+                sort = CInt(InputBox("WHAT sort of the following apply to you
+1-Sexual organs feeling unease and un explained wounds after sexual activity
+2-Sneezing and nose blockages /coughning
+3-Unusual symptoms"))
+
+                viral.Aspect(sort)
+                MsgBox("The treatmeant you will need is: " & viral.medicament(sort))
+
+
             Case "Bacterial"
                 Dim prevention As String
                 Dim med As String
@@ -135,10 +144,16 @@ Public Class Form1
                 Rtxtdisplay.Text = "You are more likely to have a Bacterial Disease" & vbNewLine & vbNewLine & "A culture test can help find harmful bacteria in or on your body that is making you sick." & vbNewLine & whichtest & vbNewLine & vbNewLine & "Medication" & vbNewLine & med & vbNewLine & vbNewLine & "Prevention" & vbNewLine & bac.prevention
                 diseasecategory(3) = bac
             Case "Auto-Immune"
-
+ Dim write As StreamWriter
+        write = File.AppendText("Viral.txt")
+        write.WriteLine("Amount of drugs taken " & CStr(viral.Drugs))
+        write.WriteLine("Age of user " & CStr(viral.age))
+        write.WriteLine(viralperc)
+        write.WriteLine(viral.Aspect(sort))
+        write.WriteLine(viral.medicament(sort))
+        write.Close()
 
         End Select
     End Sub
-
 
 End Class
