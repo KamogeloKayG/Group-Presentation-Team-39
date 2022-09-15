@@ -1,10 +1,16 @@
-﻿Option Strict On
+﻿'Team Number: 39
+'Team Member Details: Mabatha, KA (221077585)
+'Team Member Details:Maposa T 222078730
+'Team Member Details: Mogoane, M (222002111)
+'Team Member Details:PANANA R 218026867
+'Practical: Team Project
+'Class Name: Viral
+Option Strict On
 Option Explicit On
 Option Infer Off
 
 Public Class Viral
     Inherits Diseasecategory
-    Private _report As report
     Private _age As Integer
     Private _female As Boolean
     Private _sexualActivity As Integer
@@ -49,15 +55,6 @@ Public Class Viral
         End Get
         Set(value As Integer)
             _drugintake = value
-        End Set
-    End Property
-
-    Public Property report As report
-        Get
-            Return _report
-        End Get
-        Set(value As report)
-            _report = value
         End Set
     End Property
     Public Function Aspect(x As Integer) As String

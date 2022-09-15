@@ -3,7 +3,7 @@
 'Team Member Details: Mabatha, KA (221077585)
 'Team Member Details:Maposa T 222078730
 'Team Member Details: Mogoane, M (222002111)
-'Team Member Details:
+'Team Member Details:PANANA R 218026867
 'Practical: Team Project
 'Class Name: DiseaseCategory
 '*******************************************************************************
@@ -16,9 +16,9 @@ Public MustInherit Class Diseasecategory
 
     Private _prevention As String
     Private likelihood As String
-    Private _report As report
+    Private _report As user_report
     Public Sub New()
-        _report = New report
+        _report = New user_report
     End Sub
 
     Public Property prevention As String
@@ -29,7 +29,14 @@ Public MustInherit Class Diseasecategory
             _prevention = value
         End Set
     End Property
-
+    Public Property report As user_report
+        Get
+            Return _report
+        End Get
+        Set(value As user_report)
+            _report = value
+        End Set
+    End Property
 
 
     Public Function likely(viralperc As Double, autoimmuneperc As Double, bacperc As Double) As String

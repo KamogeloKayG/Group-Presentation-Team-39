@@ -1,4 +1,11 @@
-﻿Option Strict On
+﻿'Team Number: 39
+'Team Member Details: Mabatha, KA (221077585)
+'Team Member Details:Maposa T 222078730
+'Team Member Details: Mogoane, M (222002111)
+'Team Member Details:PANANA R 218026867
+'Practical: Team Project
+'Class Name: 
+Option Strict On
 Option Explicit On
 Option Infer Off
 Imports System.IO
@@ -151,15 +158,14 @@ Public Class Form1
                 diseasecategory(3) = bac
             Case "Auto-Immune"
                 Dim temp As Integer
-                Dim bloodsugarlevel As Double
                 Dim text As String = ""
 
                 aimmune = TryCast(diseasecategory(2), Autoimmune)
                 If Not (aimmune Is Nothing) Then
                     temp = CInt((InputBox("Enter organ that the pain is situated" & Environment.NewLine & "1.The beta cells of the endocrine pancreas" & Environment.NewLine & "2.Thyroid" & Environment.NewLine & "3.gastric parietal cells" & Environment.NewLine & "4.adrenal and ovary" & Environment.NewLine & "5.Skin")))
                     If temp = 1 Then
-                        bloodsugarlevel = CDbl(InputBox("Enter your blood sugar level"))
-                        aimmune.Diabetic(bloodsugarlevel)
+                        aimmune.report.bloodsugarlevel = CDbl(InputBox("Enter your blood sugar level"))
+                        aimmune.Diabetic(aimmune.report.bloodsugarlevel)
                     End If
                     aimmune.autoimmumetype(temp)
                     aimmune.Medicament(temp)
@@ -169,7 +175,7 @@ Public Class Form1
                     text &= "The treatment you should take is:" & Environment.NewLine & aimmune.Medicament(temp) & Environment.NewLine
                     text &= aimmune.prevention
                     Rtxtdisplay.Text = text
-
+                    
                 End If
 
                 diseasecategory(2) = aimmune

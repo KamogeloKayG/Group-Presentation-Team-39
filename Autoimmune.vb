@@ -1,7 +1,20 @@
-﻿Public Class Autoimmune
+﻿
+'Team Number: 39
+'Team Member Details: Mabatha, KA (221077585)
+'Team Member Details:Maposa T 222078730
+'Team Member Details: Mogoane, M (222002111)
+'Team Member Details:PANANA R 218026867
+'Practical: Team Project
+'Class Name: Autoimmune
+'*******************************************************************************
+Option Strict On
+Option Explicit On
+Option Infer Off
+Public Class Autoimmune
     Inherits Diseasecategory
 
     Implements Diabetes
+    'attributes
     Private _type As String
     Private _treatment As String
     Private _Obese As Boolean
@@ -11,9 +24,11 @@
     Private _cholesterolmeds As Boolean
     Private _exebvirus As Boolean
 
+    'constructor
     Public Sub New()
         MyBase.New()
     End Sub
+    'property methods
     Public Property type() As String
         Get
             Return _type
@@ -82,6 +97,7 @@
         End Set
     End Property
 
+
     'checks whether the user is diabetic or not
     Public Function Diabetic(bloodsugarlevel As Double) As Boolean Implements Diabetes.Diabetic
         Dim temp As Boolean
@@ -93,18 +109,6 @@
             End If
         End If
         Return temp
-    End Function
-    'f your BMI is 18.5 to <25, it falls within the healthy weight range.
-    'If your BMI is 25.0 to <30, it falls within the overweight range.
-    'If your BMI is 30.0 or higher, it falls within the obesity range.
-
-    'states if the user is at risk of autoimmune disease 
-    Public Function AtRisk(g As Integer) As String
-        Dim msg As String = ""
-        If g = 1 Then
-            msg = "You are susceptible of having autoimmune diseases"
-        End If
-        Return msg
     End Function
     'specifies which autoimmnune disease the user might possibly have
     Public Function autoimmumetype(temp As Integer) As String
