@@ -22,7 +22,7 @@ Public Class Viral
 
     Public Sub New()
 
-        MyBase.New
+        MyBase.New()
 
     End Sub
     Public Property age As Integer

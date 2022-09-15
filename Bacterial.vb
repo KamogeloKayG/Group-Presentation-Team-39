@@ -11,10 +11,8 @@ Option Infer Off
 
 Public Class Bacterial
     Inherits Diseasecategory
+    'attributes
     Private _userreport As user_report
-
-
-
     Private _unprotectedsex As Boolean
     Private _hivpositive As Boolean
     Private _obese As Boolean
@@ -22,10 +20,12 @@ Public Class Bacterial
     Private _smoking As Boolean
     Private _nophysicalactivity As Boolean
 
+    'constructor
     Public Sub New()
         MyBase.New()
     End Sub
 
+    'property methods
     Public Property unprotectedsex As Boolean
         Get
             Return _unprotectedsex
@@ -87,7 +87,7 @@ Public Class Bacterial
         End Set
     End Property
 
-
+    'will tell the user which culture test they should undergo to verify if they have a bacterial disease
     Public Function culturetest(x As Integer) As String
         Dim test As String
         test = ""
@@ -116,6 +116,7 @@ Public Class Bacterial
 
     End Function
 
+    'tells the user which medication is associated with the culture test they have to undergo
     Public Overrides Function medicament(x As Integer) As String
         Dim treatment As String
         treatment = ""
