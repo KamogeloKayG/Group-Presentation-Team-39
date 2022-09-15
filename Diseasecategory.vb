@@ -15,11 +15,19 @@ Imports System.IO
 Public MustInherit Class Diseasecategory
 
 
-    Private likelihood As String
-    Private report As report
+    Private _likelihood As String
+    Private _report As report
     Public Sub New()
-        report = New report
+        _report = New report
     End Sub
+    Public Property likelihood As String
+        Get
+            Return _likelihood
+        End Get
+        Set(value As String)
+            _likelihood = value
+        End Set
+    End Property
 
     Public Function likely(viralperc As Double, autoimmuneperc As Double, bacperc As Double) As String
         If (viralperc > bacperc) And (viralperc > autoimmuneperc) Then
