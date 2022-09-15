@@ -15,6 +15,9 @@ Public Class Autoimmune
 
     Implements Diabetes
     'attributes
+    Private _userreport As user_report
+
+
     Private _type As String
     Private _treatment As String
     Private _Obese As Boolean
@@ -128,6 +131,15 @@ Public Class Autoimmune
 
         Return type
     End Function
+
+    Public Property userreport As user_report
+        Get
+            Return _userreport
+        End Get
+        Set(value As user_report)
+            _userreport = value
+        End Set
+    End Property
     'states the treatment specific to the type of autoimmune disease at hand
     Public Overrides Function Medicament(x As Integer) As String
         Select Case x

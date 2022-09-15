@@ -128,7 +128,8 @@ Public Class Form1
 
         write.Close()
         highest = bac.likely(viralperc, aimmuneperc, bacperc)
-        ' MsgBox(highest)
+
+        aimmune.userreport = userreport
         Select Case highest
             Case "Viral"
 
@@ -155,9 +156,10 @@ Public Class Form1
 
 
                 bac.prevention = "To prevent getting a bacterial disease you must do the following: " & vbNewLine & bac.Prevent("Bacterial")
-
+                bac.userreport = userreport
                 Rtxtdisplay.Text = "You are more likely to have a Bacterial Disease" & vbNewLine & vbNewLine & "A culture test can help find harmful bacteria in or on your body that is making you sick." & vbNewLine & whichtest & vbNewLine & vbNewLine & "Medication" & vbNewLine & med & vbNewLine & vbNewLine & "Prevention" & vbNewLine & bac.prevention
                 diseasecategory(3) = bac
+
             Case "Auto-Immune"
                 Dim temp As Integer
                 Dim text As String = ""
@@ -170,6 +172,7 @@ Public Class Form1
                         aimmune.Diabetic(aimmune.report.bloodsugarlevel)
                     End If
                     aimmune.autoimmumetype(temp)
+                    aimmune.userreport = userreport
                     aimmune.Medicament(temp)
                     aimmune.prevention = "To reduce the risk of having an autoimmune disease follow these preventitive measures:" & Environment.NewLine & aimmune.Prevent("Auto-Immune")
                     text &= "You are susceptible to having an autoimmune disease" & Environment.NewLine

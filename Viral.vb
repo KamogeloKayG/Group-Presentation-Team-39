@@ -11,6 +11,9 @@ Option Infer Off
 
 Public Class Viral
     Inherits Diseasecategory
+    Private _userreport As user_report
+
+
     Private _age As Integer
     Private _female As Boolean
     Private _sexualActivity As Integer
@@ -45,6 +48,15 @@ Public Class Viral
         End Get
         Set(value As Integer)
             _sexualActivity = value
+        End Set
+    End Property
+
+    Public Property userreport As user_report
+        Get
+            Return _userreport
+        End Get
+        Set(value As user_report)
+            _userreport = value
         End Set
     End Property
 

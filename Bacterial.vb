@@ -11,6 +11,10 @@ Option Infer Off
 
 Public Class Bacterial
     Inherits Diseasecategory
+    Private _userreport As user_report
+
+
+
     Private _unprotectedsex As Boolean
     Private _hivpositive As Boolean
     Private _obese As Boolean
@@ -57,6 +61,14 @@ Public Class Bacterial
         End Set
     End Property
 
+    Public Property userreport As user_report
+        Get
+            Return _userreport
+        End Get
+        Set(value As user_report)
+            _userreport = value
+        End Set
+    End Property
     Public Property smoking As Boolean
         Get
             Return _smoking
