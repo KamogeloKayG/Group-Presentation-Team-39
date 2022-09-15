@@ -175,7 +175,7 @@ Public Class Form1
                     text &= "The treatment you should take is:" & Environment.NewLine & aimmune.Medicament(temp) & Environment.NewLine
                     text &= aimmune.prevention
                     Rtxtdisplay.Text = text
-                    MsgBox(aimmune.prevention)
+                    
                 End If
 
                 diseasecategory(2) = aimmune
