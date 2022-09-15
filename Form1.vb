@@ -120,7 +120,7 @@ Public Class Form1
             Case "Viral"
 
             Case "Bacterial"
-                Dim prevention As String
+
                 Dim med As String
                 Dim condition As Integer
                 Dim whichtest As String
