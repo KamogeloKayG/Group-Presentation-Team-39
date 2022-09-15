@@ -13,8 +13,6 @@ Imports System.IO
 Public Class frmDisease
     Private counterviral, counteraimmune, counterbacterial As Integer
 
-
-
     Private diseasecategory() As Diseasecategory
 
 
@@ -31,6 +29,8 @@ Public Class frmDisease
         Dim viral As Viral
         viral = New Viral
         userreport = New user_report
+
+        'getting details about the user
         userreport.username = txtname.Text
         userreport.weight = CDbl(txtweight.Text)
         userreport.height = CDbl(txtweight.Text)
@@ -109,11 +109,17 @@ Public Class frmDisease
         End If
 
         'upcasting
-        diseasecategory(1) = viral
-        diseasecategory(2) = aimmune
-        diseasecategory(3) = bac
-
+        For a As Integer = 1 To 3
+            If a = 1 Then
+                diseasecategory(a) = viral
+            ElseIf a = 2 Then
+                diseasecategory(a) = aimmune
+            ElseIf a = 3 Then
+                diseasecategory(a) = bac
+            End If
+        Next a
         Dim bacperc, aimmuneperc, viralperc As Double
+        'calculating percentages for the disease categories
         bacperc = counterbacterial / 6 * 100
         aimmuneperc = counteraimmune / 7 * 100
         viralperc = counterviral / 4 * 100
@@ -121,7 +127,7 @@ Public Class frmDisease
         Dim highest As String
         Dim sort As Integer
         'file
-
+        'calculating hightst percentage
         highest = bac.likely(viralperc, aimmuneperc, bacperc)
 
         aimmune.userreport = userreport
@@ -144,21 +150,25 @@ Public Class frmDisease
                 Dim med As String
                 Dim condition As Integer
                 Dim whichtest As String
+                'input from user
                 condition = CInt(InputBox("Which of the following have you experienced lately?" & vbNewLine & "1: Pain in spinal cord (back pain)" & vbNewLine & "2: Stomach Pain" & vbNewLine & "3: Pain in throat" & vbNewLine & "4: Difficulty in breathing" & vbNewLine & "5: Bloody urine or pain after urinating" & vbNewLine & "6: An Open Wound " & vbNewLine))
+                'determining which culture test the user has to undergo
                 whichtest = "Go to a doctor and ask for a " & bac.culturetest(condition) & " to confirm if you have a bacterial infection."
+                'letting the user know which treatment is commonly associated with the culture test they have to undego
                 med = "Medicine that is commonly associated with " & bac.culturetest(condition) & " is " & bac.medicament(condition) & "."
 
 
-
+                'list of preventative methods to reduce risk of getting a bacterial disease
                 bac.prevention = "To prevent getting a bacterial disease you must do the following: " & vbNewLine & bac.Prevent("Bacterial")
                 bac.userreport = userreport
+                'display
                 Rtxtdisplay.Text = "You are more likely to have a Bacterial Disease" & vbNewLine & vbNewLine & "A culture test can help find harmful bacteria in or on your body that is making you sick." & vbNewLine & whichtest & vbNewLine & vbNewLine & "Medication" & vbNewLine & med & vbNewLine & vbNewLine & "Prevention" & vbNewLine & bac.prevention
                 diseasecategory(3) = bac
 
             Case "Auto-Immune"
                 Dim temp As Integer
                 Dim text As String = ""
-
+                'downcast
                 aimmune = TryCast(diseasecategory(2), Autoimmune)
                 If Not (aimmune Is Nothing) Then
                     temp = CInt((InputBox("Enter organ that the pain is situated" & Environment.NewLine & "1.The beta cells of the endocrine pancreas" & Environment.NewLine & "2.Thyroid" & Environment.NewLine & "3.gastric parietal cells" & Environment.NewLine & "4.adrenal and ovary" & Environment.NewLine & "5.Skin")))
