@@ -5,6 +5,8 @@ Imports System.IO
 
 Public Class Form1
     Private counterviral, counteraimmune, counterbacterial As Integer
+
+
     Private diseasecategory() As Diseasecategory
 
 
@@ -106,6 +108,7 @@ Public Class Form1
         viralperc = counterviral / 4 * 100
 
         Dim highest As String
+        Dim sort As Integer
         'file
         Dim write As StreamWriter
         write = File.AppendText("Viral.txt")
@@ -118,6 +121,15 @@ Public Class Form1
         ' MsgBox(highest)
         Select Case highest
             Case "Viral"
+
+                sort = CInt(InputBox("WHAT sort of the following apply to you
+1-Sexual organs feeling unease and un explained wounds after sexual activity
+2-Sneezing and nose blockages /coughning
+3-Unusual symptoms"))
+
+                viral.Aspect(sort)
+                MsgBox("The treatmeant you will need is: " & viral.medicament(sort))
+                viral.Prevent("Viral")
 
             Case "Bacterial"
 
@@ -139,6 +151,5 @@ Public Class Form1
 
         End Select
     End Sub
-
 
 End Class
