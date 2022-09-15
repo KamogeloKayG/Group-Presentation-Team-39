@@ -16,10 +16,12 @@ Public MustInherit Class Diseasecategory
 
 
     Private likelihood As String
-    Private report As report
+    Private _report As report
     Public Sub New()
-        report = New report
+        _report = New report
     End Sub
+   
+    End Property
 
     Public Function likely(viralperc As Double, autoimmuneperc As Double, bacperc As Double) As String
         If (viralperc > bacperc) And (viralperc > autoimmuneperc) Then

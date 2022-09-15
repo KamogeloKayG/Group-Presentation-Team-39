@@ -122,6 +122,13 @@ Public Class Form1
             Case "Bacterial"
 
             Case "Auto-Immune"
+             For i As Integer = 1 To 3
+                    aimmune = TryCast(diseasecategory(i), Autoimmune)
+                    If Not (aimmune Is Nothing) Then
+
+
+                    End If
+                Next
         End Select
     End Sub
 
