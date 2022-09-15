@@ -130,7 +130,7 @@ Public Class Form1
 
                 viral.Aspect(sort)
                 viral.medicament(sort)
-                viral.prevention = "To prevent getting a viral disease you must do the following: " & vbNewLine & viral.Prevent("1. Eat healthily." & vbNewLine & "2. Take your vitamins." & vbNewLine & "3. Wash/ Sanitize your hands often." & vbNewLine & "4. Get enough sleep")
+                viral.prevention = "To prevent getting a viral disease you must do the following: " & vbNewLine & viral.Prevent("V")
                 Rtxtdisplay.Text = "You are more likely to have a viral Disease" & vbNewLine & vbNewLine & "Caused due to viral infection; may be transmitted through contaminated air, water, food or contact." & vbNewLine & "You may specifically have " & viral.Aspect(sort) & vbNewLine & vbNewLine & "The treatmeant you will need is: " & viral.medicament(sort) & vbNewLine & viral.prevention
 
                 diseasecategory(1) = viral
