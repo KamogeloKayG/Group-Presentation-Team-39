@@ -163,7 +163,7 @@ Public Class Form1
                         End If
                         aimmune.autoimmumetype(temp)
                         aimmune.Medicament(temp)
-                aimmune.prevention = "To reduce the risk of having an autoimmune disease follow these preventitive measures:" & Environment.NewLine & aimmune.Prevent("AutoImmune")
+                aimmune.prevention = "To reduce the risk of having an autoimmune disease follow these preventitive measures:" & Environment.NewLine & aimmune.Prevent("Auto-Immune")
                 text &= "You are susceptible to having an autoimmune disease" & Environment.NewLine
                         text &= "The type of autoimmune disease that you are susceptile to is:" & Environment.NewLine & aimmune.autoimmumetype(temp) & Environment.NewLine
                         text &= "The treatment you should take is:" & Environment.NewLine & aimmune.Medicament(temp) & Environment.NewLine
