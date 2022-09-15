@@ -122,7 +122,7 @@ Public Class Form1
         ' MsgBox(highest)
         Select Case highest
             Case "Viral"
-                MsgBox("IT IS A VIRAL DISEASE!!")
+
                 sort = CInt(InputBox("WHAT sort of the following apply to you
 1-Sexual organs feeling unease and un explained wounds after sexual activity
 2-Sneezing and nose blockages /coughning
