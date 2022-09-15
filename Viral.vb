@@ -89,14 +89,10 @@ Public Class Viral
                 treatment = "ACETAMINOPHEN"
             Case 3
                 treatment = "ACYCLOVIR"
-                'Case 4
-                'treatment = " Corticosteroids"
-                'Case 5
-                'treatment = "Repigmentation therapy and light therapy"
+
         End Select
 
         Return treatment
-        'End Select
-        'Return treatment
+
     End Function
 End Class

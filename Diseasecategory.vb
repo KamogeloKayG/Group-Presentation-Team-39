@@ -1,6 +1,6 @@
 ﻿'*******************************************************************************
 'Team Number: 39
-'Team Member Details: Mabatha KA 221077585
+'Team Member Details: Mabatha, KA (221077585)
 'Team Member Details:Maposa T 222078730
 'Team Member Details: Mogoane, M (222002111)
 'Team Member Details:
@@ -57,7 +57,7 @@ Public MustInherit Class Diseasecategory
         Dim prevents As String
         prevents = x
         Select Case likelihood
-            Case "Viral"
+            Case "V"
                 prevents = "1. Eat healthily." & vbNewLine & "2. Take your vitamins." & vbNewLine & "3. Wash/ Sanitize your hands often." & vbNewLine & "4. Get enough sleep"
             Case "Bacterial"
                 prevents = "1. Avoid clse contact with sick people. " & vbNewLine & "2. Cover coughs and sneezes. " & vbNewLine & "3. Avoid touching your face. " & vbNewLine & "4. Stay home if you are sick. " & vbNewLine & "5. Clean and disinfect surfaces that are touched often. " & vbNewLine & "6. Avoid contaminated food and water"
