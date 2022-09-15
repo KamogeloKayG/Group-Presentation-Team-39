@@ -14,7 +14,6 @@ Public Class Form1
     Private counterviral, counteraimmune, counterbacterial As Integer
 
 
-
     Private diseasecategory() As Diseasecategory
 
 
@@ -27,10 +26,13 @@ Public Class Form1
 
         Dim aimmune As Autoimmune
         aimmune = New Autoimmune
-
+        Dim userreport As user_report
         Dim viral As Viral
         viral = New Viral
-
+        userreport = New user_report
+        userreport.username = txtname.Text
+        userreport.weight = CDbl(txtweight.Text)
+        userreport.height = CDbl(txtweight.Text)
 
 
         If Checkboxsmoke.Checked Then
