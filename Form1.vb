@@ -14,6 +14,7 @@ Public Class Form1
     Private counterviral, counteraimmune, counterbacterial As Integer
 
 
+
     Private diseasecategory() As Diseasecategory
 
 
@@ -142,6 +143,7 @@ Public Class Form1
                 viral.medicament(sort)
                 viral.prevention = "To prevent getting a viral disease you must do the following: " & vbNewLine & viral.Prevent("V")
                 Rtxtdisplay.Text = "You are more likely to have a viral Disease" & vbNewLine & vbNewLine & "Caused due to viral infection; may be transmitted through contaminated air, water, food or contact." & vbNewLine & "You may specifically have " & viral.Aspect(sort) & vbNewLine & vbNewLine & "The treatmeant you will need is: " & viral.medicament(sort) & vbNewLine & viral.prevention
+                viral.userreport.height = CInt("WHAT IS YOUR HEIGHT")
 
                 diseasecategory(1) = viral
             Case "Bacterial"
