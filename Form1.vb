@@ -1,7 +1,7 @@
 ﻿Option Strict On
 Option Explicit On
 Option Infer Off
-
+Imports System.IO
 
 Public Class Form1
     Private counterviral, counteraimmune, counterbacterial As Integer
@@ -20,6 +20,9 @@ Public Class Form1
 
         Dim viral As Viral
         viral = New Viral
+
+
+
         If Checkboxsmoke.Checked Then
             counterbacterial += 1
             counteraimmune += 1
@@ -103,6 +106,14 @@ Public Class Form1
         viralperc = counterviral / 4 * 100
 
         Dim highest As String
+        'file
+        Dim write As StreamWriter
+        write = File.AppendText("Viral.txt")
+        write.WriteLine("Amount of drugs taken " & CStr(viral.Drugs))
+        write.WriteLine("Age of user " & CStr(viral.age))
+        write.WriteLine()
+
+        write.Close()
         highest = bac.likely(viralperc, aimmuneperc, bacperc)
 
         Select Case highest
@@ -113,4 +124,6 @@ Public Class Form1
             Case "Auto-Immune"
         End Select
     End Sub
+
+
 End Class
