@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class frmDisease
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -230,9 +230,9 @@ Partial Class Form1
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(641, 82)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 16)
+        Me.Label3.Size = New System.Drawing.Size(121, 16)
         Me.Label3.TabIndex = 12
-        Me.Label3.Text = "Drugintake"
+        Me.Label3.Text = "Drugintake per day"
         '
         'txtdrugintake
         '
@@ -245,7 +245,7 @@ Partial Class Form1
         'Rtxtdisplay
         '
         Me.Rtxtdisplay.Location = New System.Drawing.Point(615, 142)
-        Me.Rtxtdisplay.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Rtxtdisplay.Margin = New System.Windows.Forms.Padding(4)
         Me.Rtxtdisplay.Name = "Rtxtdisplay"
         Me.Rtxtdisplay.ReadOnly = True
         Me.Rtxtdisplay.Size = New System.Drawing.Size(401, 367)
@@ -303,7 +303,7 @@ Partial Class Form1
         Me.Label6.TabIndex = 20
         Me.Label6.Text = "Weight (kg)"
         '
-        'Form1
+        'frmDisease
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -324,9 +324,9 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtgender)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Name = "frmDisease"
+        Me.Text = "Disease Category"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

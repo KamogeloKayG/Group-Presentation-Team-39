@@ -10,7 +10,7 @@ Option Explicit On
 Option Infer Off
 Imports System.IO
 
-Public Class Form1
+Public Class frmDisease
     Private counterviral, counteraimmune, counterbacterial As Integer
 
 
@@ -121,13 +121,7 @@ Public Class Form1
         Dim highest As String
         Dim sort As Integer
         'file
-        Dim write As StreamWriter
-        write = File.AppendText("Viral.txt")
-        write.WriteLine("Amount of drugs taken " & CStr(viral.Drugs))
-        write.WriteLine("Age of user " & CStr(viral.age))
-        write.WriteLine()
 
-        write.Close()
         highest = bac.likely(viralperc, aimmuneperc, bacperc)
 
         aimmune.userreport = userreport
@@ -143,7 +137,6 @@ Public Class Form1
                 viral.medicament(sort)
                 viral.prevention = "To prevent getting a viral disease you must do the following: " & vbNewLine & viral.Prevent("V")
                 Rtxtdisplay.Text = "You are more likely to have a viral Disease" & vbNewLine & vbNewLine & "Caused due to viral infection; may be transmitted through contaminated air, water, food or contact." & vbNewLine & "You may specifically have " & viral.Aspect(sort) & vbNewLine & vbNewLine & "The treatmeant you will need is: " & viral.medicament(sort) & vbNewLine & viral.prevention
-                viral.userreport.height = CInt("WHAT IS YOUR HEIGHT")
 
                 diseasecategory(1) = viral
             Case "Bacterial"
@@ -151,7 +144,7 @@ Public Class Form1
                 Dim med As String
                 Dim condition As Integer
                 Dim whichtest As String
-                condition = CInt(InputBox("Which of the following have you experienced lately?" & vbNewLine & "1: Pain in spinal cord (back pain)" & vbNewLine & "2: Stomach Pain" & vbNewLine & "3: Pain in throat" & vbNewLine & "4: Difficulty in breathing" & vbNewLine & "5: Bloody urine or pain after urinating" & vbNewLine & "6: An Open Wound " & vbNewLine))
+                ondition = CInt(InputBox("Which of the following have you experienced lately?" & vbNewLine & "1: Pain in spinal cord (back pain)" & vbNewLine & "2: Stomach Pain" & vbNewLine & "3: Pain in throat" & vbNewLine & "4: Difficulty in breathing" & vbNewLine & "5: Bloody urine or pain after urinating" & vbNewLine & "6: An Open Wound " & vbNewLine))
                 whichtest = "Go to a doctor and ask for a " & bac.culturetest(condition) & " to confirm if you have a bacterial infection."
                 med = "Medicine that is commonly associated with " & bac.culturetest(condition) & " is " & bac.medicament(condition) & "."
 
@@ -182,11 +175,20 @@ Public Class Form1
                     text &= "The treatment you should take is:" & Environment.NewLine & aimmune.Medicament(temp) & Environment.NewLine
                     text &= aimmune.prevention
                     Rtxtdisplay.Text = text
-                    
+
                 End If
 
                 diseasecategory(2) = aimmune
         End Select
+        'File stream
+        Dim write As StreamWriter
+        write = File.AppendText("Viral.txt")
+        write.WriteLine("Amount of drugs taken " & CStr(viral.Drugs))
+        write.WriteLine("Age of user " & CStr(viral.age))
+        write.WriteLine(CStr(viral.Aspect(sort)))
+        write.WriteLine(CStr(bac.prevention))
+        write.WriteLine(CStr(highest))
+        write.Close()
     End Sub
 
 End Class
