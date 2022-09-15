@@ -239,7 +239,7 @@ Partial Class Form1
         'Rtxtdisplay
         '
         Me.Rtxtdisplay.Location = New System.Drawing.Point(615, 142)
-        Me.Rtxtdisplay.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Rtxtdisplay.Margin = New System.Windows.Forms.Padding(4)
         Me.Rtxtdisplay.Name = "Rtxtdisplay"
         Me.Rtxtdisplay.ReadOnly = True
         Me.Rtxtdisplay.Size = New System.Drawing.Size(401, 367)
@@ -250,6 +250,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Highlight
         Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.Rtxtdisplay)
         Me.Controls.Add(Me.txtdrugintake)
@@ -260,7 +261,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtgender)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
