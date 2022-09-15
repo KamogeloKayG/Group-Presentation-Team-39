@@ -14,12 +14,21 @@ Imports System.IO
 
 Public MustInherit Class Diseasecategory
 
-
+    Private _prevention As String
     Private likelihood As String
     Private _report As report
     Public Sub New()
         _report = New report
     End Sub
+
+    Public Property prevention As String
+        Get
+            Return _prevention
+        End Get
+        Set(value As String)
+            _prevention = value
+        End Set
+    End Property
 
 
 
