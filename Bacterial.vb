@@ -1,10 +1,16 @@
-﻿Option Strict On
+﻿'Team Number: 39
+'Team Member Details: Mabatha, KA (221077585)
+'Team Member Details:Maposa T 222078730
+'Team Member Details: Mogoane, M (222002111)
+'Team Member Details:PANANA R 218026867
+'Practical: Team Project
+'Class Name: Bacterial
+Option Strict On
 Option Explicit On
 Option Infer Off
 
 Public Class Bacterial
     Inherits Diseasecategory
-    Private _report As report
     Private _unprotectedsex As Boolean
     Private _hivpositive As Boolean
     Private _obese As Boolean
@@ -69,14 +75,6 @@ Public Class Bacterial
         End Set
     End Property
 
-    Public Property report As report
-        Get
-            Return _report
-        End Get
-        Set(value As report)
-            _report = value
-        End Set
-    End Property
 
     Public Function culturetest(x As Integer) As String
         Dim test As String
